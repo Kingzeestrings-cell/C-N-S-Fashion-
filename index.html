@@ -1,0 +1,451 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#102D72">
+<meta name="description" content="Explore African-inspired fashion, gowns, Ankara styles and custom clothing at C.N.S FASHION, Kasoa, Ghana.">
+<title>C.N.S FASHION | Your Style. Our Craft.</title>
+<style>
+:root{--blue:#123580;--navy:#0b2051;--gold:#c9a454;--bg:#f6f8fc;--ink:#17233c;--muted:#6c768b;--line:#e1e7f1;--green:#138653}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:80px}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:Arial,Helvetica,sans-serif;line-height:1.55}
+button,input,select,textarea{font:inherit}
+button,a{touch-action:manipulation}
+button{cursor:pointer}
+img,video{max-width:100%}
+a{color:inherit}
+.wrap{width:min(1180px,92%);margin:auto}
+header{background:var(--navy);color:white;position:sticky;top:0;z-index:20}
+nav{min-height:76px;display:flex;align-items:center;justify-content:space-between;gap:15px}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none}
+.logo{border:2px solid var(--gold);border-radius:50%;width:44px;height:44px;display:grid;place-items:center;color:#f0d99a;font:bold 15px Georgia;flex-shrink:0}
+.brand strong{display:block;font: bold 22px Georgia;letter-spacing:1px}
+.brand small{display:block;color:#f0d99a;letter-spacing:3px;font-size:10px}
+.navlinks{display:flex;align-items:center;gap:18px}
+.navlinks a{font-size:13px;text-decoration:none}
+.menu{display:none;background:transparent;color:white;border:1px solid #ffffff70;border-radius:8px;padding:10px}
+.btn{display:inline-flex;justify-content:center;align-items:center;gap:7px;border:0;border-radius:9px;padding:12px 16px;text-decoration:none;font-size:13px;font-weight:bold}
+.blue{background:var(--blue);color:white}
+.gold{background:var(--gold);color:#14244a}
+.light{background:white;color:var(--blue);border:1px solid var(--line)}
+.green{background:var(--green);color:white}
+.danger{background:#fff0f0;color:#a31e2a;border:1px solid #f1c7cb}
+button:disabled{opacity:.5}
+section{padding:65px 0}
+.hero{background:var(--navy);color:white;padding:60px 0}
+.hero-grid{display:grid;grid-template-columns:1fr 1fr;align-items:center;gap:40px}
+.eyebrow{color:var(--gold);font-size:11px;letter-spacing:3px;font-weight:bold;text-transform:uppercase}
+h1,h2,h3{font-family:Georgia,"Times New Roman",serif;line-height:1.15}
+h1{font-size:clamp(42px,6vw,74px);margin:15px 0}
+h1 span{color:#f0d99a}
+.hero p{color:#d9e1f3;max-width:520px;line-height:1.9}
+.hero-actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:22px}
+.hero-image{width:100%;height:450px;object-fit:cover;object-position:center 30%;border-radius:150px 150px 15px 15px;background:#243c70}
+.section-head{display:flex;justify-content:space-between;align-items:end;gap:15px;margin-bottom:25px}
+.section-head h2{font-size:clamp(30px,4vw,43px);margin:8px 0}
+.muted{color:var(--muted)}
+.search-row{display:flex;gap:10px;margin:18px 0}
+input,select,textarea{width:100%;min-width:0;padding:12px;border:1px solid #dce3ef;border-radius:9px;background:white;color:var(--ink)}
+textarea{min-height:90px;resize:vertical}
+label{display:block;font-weight:bold;font-size:12px;margin:10px 0 6px}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:22px}
+.chip{border:1px solid var(--line);border-radius:30px;background:white;padding:8px 13px;font-size:12px}
+.chip.active{background:var(--blue);color:white}
+.gallery{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:18px}
+.card{background:white;border:1px solid var(--line);border-radius:14px;overflow:hidden;min-width:0}
+.cover{background:#e9eef7;position:relative}
+.cover img,.cover video{width:100%;height:300px;object-fit:cover;display:block;cursor:pointer}
+.card-body{padding:14px}
+.card h3{font-size:20px;margin:10px 0 5px}
+.price{font-weight:bold;color:var(--blue);font-size:20px;margin:10px 0}
+.pill{display:inline-block;background:#edf2fc;color:var(--blue);border-radius:6px;padding:5px 8px;font-size:10px;font-weight:bold}
+.card-actions{display:grid;grid-template-columns:1fr 1fr;gap:7px;margin-top:12px}
+.card-actions .btn{padding:10px 6px;font-size:11px}
+.empty{grid-column:1/-1;text-align:center;padding:35px 20px;background:white;border:1px dashed #ccd6e6;border-radius:15px}
+.band{background:#edf2fc}
+.about-grid,.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:35px;align-items:center}
+.about-image{width:100%;height:380px;object-fit:cover;border-radius:16px}
+.contact-panel{background:var(--navy);color:white;padding:30px;border-radius:18px}
+.contact-panel p{color:#d8e0f3}
+footer{background:#081a43;color:#d4dcef;padding:30px 0}
+footer a{color:inherit}
+.notice{background:#fff4d9;padding:13px;margin:0}
+.notice strong{display:block}
+.notice[hidden]{display:none}
+.fab{position:fixed;right:15px;bottom:15px;z-index:15;background:var(--green);color:white;border-radius:40px;padding:13px 17px;text-decoration:none;font-weight:bold;font-size:12px}
+.modal{display:none;position:fixed;inset:0;z-index:50;background:#06112ddd;padding:12px;overflow:auto;align-items:center;justify-content:center}
+.modal.show{display:flex}
+.modal-card{background:white;border-radius:15px;padding:22px;width:min(850px,100%);max-height:95dvh;overflow:auto}
+.modal-card.narrow{width:min(420px,100%)}
+.close{float:right;border:1px solid var(--line);border-radius:50%;background:white;font-size:22px;width:36px;height:36px}
+.detail-grid{clear:both;display:grid;grid-template-columns:1fr 1fr;gap:22px}
+.detail-media{width:100%;height:420px;object-fit:contain;background:#edf0f7;border-radius:10px}
+.thumbs{display:flex;gap:8px;overflow:auto;margin-top:8px}
+.thumb{width:65px;height:70px;flex-shrink:0;object-fit:cover;border:2px solid var(--line);border-radius:6px}
+.thumb.active{border-color:var(--gold)}
+.review{border:1px solid var(--line);border-radius:10px;padding:13px;margin:10px 0}
+.review-form{background:#f4f6fb;border:1px solid var(--line);border-radius:12px;padding:15px;margin-top:15px}
+.tabs{display:flex;gap:6px;flex-wrap:wrap;margin:18px 0}
+.tab{border:1px solid var(--line);background:white;border-radius:8px;padding:9px;font-size:12px}
+.tab.active{background:var(--blue);color:white}
+.pane{display:none}
+.pane.active{display:block}
+.admin-item{display:flex;align-items:center;gap:10px;border:1px solid var(--line);border-radius:10px;padding:10px;margin:9px 0}
+.admin-item img{width:52px;height:62px;object-fit:cover}
+.grow{flex:1;min-width:0;font-size:12px;overflow-wrap:anywhere}
+.actions{display:flex;gap:5px;flex-wrap:wrap}
+.actions .btn{padding:8px;font-size:11px}
+.status{font-size:12px;overflow-wrap:anywhere}
+.preview-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px;margin:12px 0}
+.preview{position:relative;aspect-ratio:3/4;background:#edf0f7;overflow:hidden;border-radius:8px}
+.preview img,.preview video{width:100%;height:100%;object-fit:cover}
+.preview button{position:absolute;top:4px;right:4px;background:#102d72;color:white;border:0;border-radius:50%;width:26px;height:26px}
+#toast{display:none;position:fixed;bottom:75px;left:50%;transform:translateX(-50%);background:var(--navy);color:white;padding:12px;border-radius:9px;z-index:100;max-width:90%;font-size:12px}
+#toast.show{display:block}
+@media(max-width:950px){.gallery{grid-template-columns:repeat(3,minmax(0,1fr))}.cover img,.cover video{height:270px}}
+@media(max-width:700px){
+ section{padding:48px 0}
+ nav{min-height:68px}
+ .brand strong{font-size:17px}
+ .brand small{font-size:8px;letter-spacing:2px}
+ .menu{display:block}
+ .navlinks{display:none;position:absolute;top:68px;left:0;right:0;background:var(--navy);padding:20px 4%;flex-direction:column;align-items:stretch}
+ .navlinks.open{display:flex}
+ .hero{padding:45px 0}
+ .hero-grid,.about-grid,.contact-grid,.detail-grid{grid-template-columns:1fr}
+ .hero-image{height:340px}
+ .gallery{grid-template-columns:repeat(2,minmax(0,1fr));gap:11px}
+ .cover img,.cover video{height:225px}
+ .card-body{padding:10px}
+ .card h3{font-size:17px}
+ .card-actions{grid-template-columns:1fr}
+ .section-head{align-items:start;flex-direction:column}
+ .about-image{height:290px}
+ .detail-media{height:330px}
+ .modal-card{padding:15px}
+ .preview-grid{grid-template-columns:repeat(3,minmax(0,1fr))}
+ .admin-item{flex-wrap:wrap}
+ .actions{width:100%}
+}
+@media(max-width:380px){.cover img,.cover video{height:185px}.brand strong{font-size:15px}}
+</style>
+</head>
+<body>
+<header>
+ <nav class="wrap">
+  <a class="brand" href="#home"><span class="logo">CNS</span><span><strong>C.N.S FASHION</strong><small>YOUR STYLE. OUR CRAFT.</small></span></a>
+  <button class="menu" id="menuBtn" aria-label="Open navigation">☰</button>
+  <div class="navlinks" id="navlinks">
+   <a href="#home">Home</a><a href="#collection">Collections</a><a href="#about">Our Story</a><a href="#contact">Contact</a>
+   <button class="btn gold" id="adminOpen">Owner's Area 🔒</button>
+  </div>
+ </nav>
+</header>
+
+<div id="notice" class="notice" hidden><div class="wrap"><strong id="noticeTitle"></strong><span id="noticeBody"></span></div></div>
+
+<main>
+<section class="hero" id="home">
+ <div class="wrap hero-grid">
+  <div>
+   <div class="eyebrow">African Inspiration · Modern Elegance</div>
+   <h1>Your Style.<br><span>Our Craft.</span></h1>
+   <p>Discover beautiful designs that celebrate your individuality. From vibrant Ankara styles to elegant gowns, find a look that feels uniquely you.</p>
+   <div class="hero-actions"><a class="btn gold" href="#collection">Explore the Collection ↗</a><a class="btn light" id="heroWA" target="_blank" rel="noopener">Chat on WhatsApp</a></div>
+   <p>African-inspired style · Custom designs · Kasoa, Ghana</p>
+  </div>
+  <img class="hero-image" src="https://images.unsplash.com/photo-1539109136881-3be0616acf4b?auto=format&fit=crop&w=1000&q=85" alt="Fashion editorial" onerror="this.src='https://placehold.co/800x1000/102D72/ffffff?text=C.N.S+FASHION'">
+ </div>
+</section>
+
+<section id="collection">
+ <div class="wrap">
+  <div class="section-head"><div><div class="eyebrow">Discover your next look</div><h2>Explore Our Collection</h2><p class="muted">Browse designs, prices, pictures and videos.</p></div><span class="pill" id="designCount">Loading…</span></div>
+  <div class="search-row"><input id="search" type="search" placeholder="Search Ankara, gowns, office wear…" aria-label="Search designs"><button class="btn light" id="clearSearch">Clear</button></div>
+  <div class="chips" id="categories"></div>
+  <div class="gallery" id="gallery"><div class="empty">Loading collection…</div></div>
+ </div>
+</section>
+
+<section class="band" id="about">
+ <div class="wrap">
+  <div class="about-grid">
+   <img class="about-image" src="https://images.unsplash.com/photo-1529139574466-a303027c1d8b?auto=format&fit=crop&w=1000&q=85" alt="Fashion inspiration" loading="lazy" onerror="this.src='https://placehold.co/800x700/edf2fc/123580?text=CNS+FASHION'">
+   <div><div class="eyebrow">The C.N.S FASHION story</div><h2>Fashion that feels like you.</h2><p class="muted">C.N.S FASHION is a fashion design brand based in Kasoa, Ghana. We bring African-inspired creativity and modern fashion together to help you express your individuality.</p><p class="muted">Explore styles for everyday wear, work, parties, weddings and special occasions. Contact us to discuss your preferred fabric, colour, fit and tailoring requirements.</p><a class="btn blue" href="#contact">Let's Talk Fashion ↗</a></div>
+  </div>
+ </div>
+</section>
+
+<section id="contact">
+ <div class="wrap contact-panel contact-grid">
+  <div><div class="eyebrow">Let's create your look</div><h2>Have a design in mind?</h2><p>Ask about availability, pricing, fabrics and custom tailoring.</p><a id="contactWA" class="btn gold" target="_blank" rel="noopener">Chat on WhatsApp ↗</a></div>
+  <div><p><strong>Our Location</strong><br>Kasoa, Ghana</p><p><strong>WhatsApp enquiries</strong><br>+233 25 763 0640</p><p><strong>Our Promise</strong><br>Your Style. Our Craft.</p></div>
+ </div>
+</section>
+</main>
+
+<footer><div class="wrap"><div class="brand"><span class="logo">CNS</span><span><strong>C.N.S FASHION</strong><small>YOUR STYLE. OUR CRAFT.</small></span></div><p>Beautiful designs for every occasion.</p><p>Kasoa, Ghana · WhatsApp: +233 25 763 0640</p><small>© <span id="year"></span> C.N.S FASHION. All rights reserved.</small></div></footer>
+<a class="fab" id="floatingWA" target="_blank" rel="noopener">WhatsApp Us ↗</a>
+<div id="toast" role="status" aria-live="polite"></div>
+
+<div class="modal" id="detailModal" role="dialog" aria-modal="true">
+ <div class="modal-card"><button class="close" data-close="detailModal">×</button><div id="detailContent"></div></div>
+</div>
+<div class="modal" id="pinModal" role="dialog" aria-modal="true">
+ <div class="modal-card narrow"><button class="close" data-close="pinModal">×</button><h2>Owner Access 🔐</h2><p class="muted">Enter the owner PIN.</p><form id="pinForm"><label for="pin">Owner PIN</label><input id="pin" type="password" required autocomplete="current-password"><p id="pinError" class="status"></p><button class="btn blue" type="submit">Unlock Dashboard</button></form></div>
+</div>
+<div class="modal" id="adminModal" role="dialog" aria-modal="true">
+ <div class="modal-card"><button class="close" data-close="adminModal">×</button><div class="eyebrow">C.N.S FASHION</div><h2>Owner Dashboard</h2>
+  <p class="muted">Changes are saved in this browser only. Use backup/restore to transfer data to another device.</p>
+  <div class="tabs"><button class="tab active" data-tab="designPane">Designs & Media</button><button class="tab" data-tab="noticePane">Announcements</button><button class="tab" data-tab="feedbackPane">Reviews & Q&amp;A</button><button class="tab" data-tab="backupPane">Backup</button></div>
+  <div class="pane active" id="designPane">
+   <h3 id="formTitle">Add a Fashion Design</h3>
+   <form id="designForm">
+    <label for="dName">Design name *</label><input id="dName" required maxlength="90">
+    <label for="dCategory">Category *</label><select id="dCategory"><option>Ankara</option><option>African Wear</option><option>Kente Inspired</option><option>Casual Dresses</option><option>Evening &amp; Party</option><option>Office Wear</option><option>Gowns</option><option>Skirts &amp; Blouses</option><option>Two-Piece Sets</option><option>Jumpsuits</option><option>Wedding Guest Outfits</option><option>Other Styles</option></select>
+    <label for="dPrice">Price in GH₵ *</label><input id="dPrice" type="number" min=".01" step=".01" required>
+    <label for="dType">Clothing type</label><select id="dType"><option value="both">Ready-made & custom-made</option><option value="ready">Ready-made</option><option value="custom">Custom-made</option></select>
+    <label for="dAvailability">Availability</label><select id="dAvailability"><option value="available">Available</option><option value="made-to-order">Made to order</option><option value="sold-out">Sold out</option><option value="unavailable">Unavailable</option></select>
+    <label for="dDescription">Description</label><textarea id="dDescription" maxlength="1200"></textarea>
+    <label for="dFiles">Upload pictures and videos</label><input id="dFiles" type="file" accept="image/*,video/*" multiple>
+    <small class="muted">Images: 2 MB each. Videos: 8 MB each. Files are stored locally in this browser.</small>
+    <label for="dURL">Or picture/video URL (including public Drive links)</label><input id="dURL" type="url" placeholder="https://…">
+    <div id="mediaPreview" class="preview-grid"></div>
+    <label for="dCover">Cover media</label><select id="dCover"><option value="0">First media item</option></select>
+    <button class="btn blue" type="submit" id="saveDesign">Add Design</button><button class="btn light" id="cancelEdit" type="button" hidden>Cancel edit</button>
+    <p id="designStatus" class="status"></p>
+   </form>
+   <hr><h3>Manage Collection</h3><div id="adminList"></div>
+  </div>
+  <div class="pane" id="noticePane">
+   <h3>Publish Announcement</h3><form id="noticeForm"><label for="nTitle">Heading</label><input id="nTitle" required maxlength="100"><label for="nBody">Message</label><textarea id="nBody" required maxlength="2000"></textarea><label for="nState">Visibility</label><select id="nState"><option value="published">Publish now</option><option value="draft">Save draft</option></select><button class="btn blue">Save announcement</button></form><div id="noticeAdmin"></div>
+  </div>
+  <div class="pane" id="feedbackPane"><p class="muted">Customer reviews and questions are stored in this browser only.</p><div id="feedbackAdmin"></div></div>
+  <div class="pane" id="backupPane"><p>Export a backup before clearing browser data or moving to another device.</p><button id="exportBtn" class="btn blue">Export backup JSON</button><label for="importFile">Restore backup JSON</label><input id="importFile" type="file" accept=".json,application/json"><button id="importBtn" class="btn light">Import backup</button><p id="backupStatus" class="status"></p></div>
+  <hr><button class="btn light" id="logout">Lock Dashboard</button>
+ </div>
+</div>
+
+<script>
+"use strict";
+
+/* No server or backend. Local browser data only. */
+const WHATSAPP="233257630640";
+const OWNER_PIN="A1O1";
+const KEY="cnsFashionData_v3";
+const MAX_IMAGE=2*1024*1024, MAX_VIDEO=8*1024*1024, MAX_MEDIA=10;
+let data={designs:[],announcements:[],interactions:[]};
+let category="All",editId=null,owner=false,detailId=null,detailMedia=0,rating=5;
+let editMedia=[],toastTimer;
+
+const $=id=>document.getElementById(id);
+const uid=()=>Date.now().toString(36)+Math.random().toString(36).slice(2,8);
+const esc=s=>String(s??"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+const money=n=>"GH₵ "+Number(n||0).toLocaleString("en-GH",{minimumFractionDigits:2,maximumFractionDigits:2});
+const typeName=t=>({ready:"Ready-made",custom:"Custom-made",both:"Ready-made & custom-made"}[t]||"Custom-made");
+const availName=a=>({"available":"Available","made-to-order":"Made to order","sold-out":"Sold out","unavailable":"Unavailable"}[a]||"Available");
+const wa=text=>"https://wa.me/"+WHATSAPP+"?text="+encodeURIComponent(text);
+function toast(s){$("toast").textContent=s;$("toast").classList.add("show");clearTimeout(toastTimer);toastTimer=setTimeout(()=>$("toast").classList.remove("show"),3000)}
+function save(){
+ try{localStorage.setItem(KEY,JSON.stringify(data));return true}
+ catch(e){console.warn("Local save failed",e);toast("Browser storage is full. Export a backup and use smaller media files.");return false}
+}
+function load(){
+ try{
+  const s=localStorage.getItem(KEY);
+  if(s){const x=JSON.parse(s);if(x&&Array.isArray(x.designs))data={designs:x.designs,announcements:Array.isArray(x.announcements)?x.announcements:[],interactions:Array.isArray(x.interactions)?x.interactions:[]}}
+ }catch(e){console.warn("Local data could not be read",e)}
+ if(!data.designs.length)data.designs=[
+  {id:"demo1",name:"Ankara Flare Dress",category:"Ankara",price:250,type:"both",availability:"available",description:"An Ankara-inspired look. Ask about fabric and fit.",media:[{type:"image",src:"https://images.unsplash.com/photo-1585247226801-bc613c441316?auto=format&fit=crop&w=800&q=80"}]},
+  {id:"demo2",name:"Elegant Evening Dress",category:"Evening & Party",price:350,type:"custom",availability:"made-to-order",description:"An elegant occasion look. Contact us to discuss tailoring.",media:[{type:"image",src:"https://images.unsplash.com/photo-1566174053879-31528523f8ae?auto=format&fit=crop&w=800&q=80"}]},
+  {id:"demo3",name:"Modern Casual Dress",category:"Casual Dresses",price:180,type:"ready",availability:"available",description:"A versatile style for outings and casual occasions.",media:[{type:"image",src:"https://images.unsplash.com/photo-1515372039744-b8f02a3ae446?auto=format&fit=crop&w=800&q=80"}]},
+  {id:"demo4",name:"Classic Black Dress",category:"Evening & Party",price:220,type:"both",availability:"available",description:"A timeless black outfit with an elegant silhouette.",media:[{type:"image",src:"https://images.unsplash.com/photo-1539008835657-9e8e9680c956?auto=format&fit=crop&w=800&q=80"}]},
+  {id:"demo5",name:"Floral Summer Dress",category:"Casual Dresses",price:160,type:"ready",availability:"available",description:"A light style for sunny days and casual outings.",media:[{type:"image",src:"https://images.unsplash.com/photo-1496747611176-843222e1e57c?auto=format&fit=crop&w=800&q=80"}]},
+  {id:"demo6",name:"Contemporary African Look",category:"African Wear",price:280,type:"custom",availability:"made-to-order",description:"A modern look inspired by African fashion.",media:[{type:"image",src:"https://images.unsplash.com/photo-1539109136881-3be0616acf4b?auto=format&fit=crop&w=800&q=80"}]},
+  {id:"demo7",name:"Two-Piece Style",category:"Two-Piece Sets",price:300,type:"both",availability:"available",description:"A coordinated outfit idea adaptable to your taste.",media:[{type:"image",src:"https://images.unsplash.com/photo-1483985988355-763728e1935b?auto=format&fit=crop&w=800&q=80"}]},
+  {id:"demo8",name:"Modern Office Style",category:"Office Wear",price:200,type:"custom",availability:"made-to-order",description:"A polished style for work and smart occasions.",media:[{type:"image",src:"https://images.unsplash.com/photo-1485230895905-ec40ba36b9bc?auto=format&fit=crop&w=800&q=80"}]}
+ ];
+ renderAll();
+}
+function normalizeDrive(url){
+ const s=String(url||"").trim();
+ let m=s.match(/drive\.google\.com\/file\/d\/([^/]+)/);
+ if(!m)m=s.match(/[?&]id=([^&]+)/);
+ if(m)return "https://drive.google.com/uc?export=download&id="+m[1];
+ return s;
+}
+function mediaFor(d){
+ let a=Array.isArray(d.media)?d.media:[];
+ if(!a.length&&d.image)a=[{type:"image",src:d.image}];
+ return a.filter(m=>m&&m.src).map(m=>({...m,src:normalizeDrive(m.src),type:m.type||(/^data:video\//i.test(m.src)?"video":"image")}));
+}
+function coverFor(d){const a=mediaFor(d);return a[Math.min(Number(d.coverIndex)||0,Math.max(0,a.length-1))]||a[0]}
+function mediaHTML(m,attrs=""){
+ if(!m)return '<div class="empty">No media added yet.</div>';
+ if(m.type==="video")return `<video src="${esc(m.src)}" ${attrs} controls playsinline preload="metadata" style="width:100%;height:100%;object-fit:contain;background:#edf0f7"></video>`;
+ return `<img src="${esc(m.src)}" ${attrs} loading="lazy" onerror="this.onerror=null;this.src='https://placehold.co/600x800/eaf0fb/123580?text=CNS+FASHION'">`;
+}
+function stats(id){const r=data.interactions.filter(x=>x.designId===id&&x.kind==="review"&&!x.hidden);return {count:r.length,avg:r.length?r.reduce((s,x)=>s+Number(x.rating||0),0)/r.length:0}}
+function stars(n){return "★".repeat(Math.max(0,Math.min(5,Math.round(n||0))))+"☆".repeat(5-Math.max(0,Math.min(5,Math.round(n||0))))}
+function inquiry(d){return `Hello C.N.S FASHION! I am interested in "${d.name}".\nCategory: ${d.category}\nPrice: ${money(d.price)}\nAvailability: ${availName(d.availability)}\nPlease tell me how to proceed.`}
+
+function renderGallery(){
+ const all=data.designs.filter(d=>!d.hidden);
+ const cats=["All",...new Set(all.map(d=>d.category||"Other"))];
+ if(!cats.includes(category))category="All";
+ $("categories").innerHTML=cats.map(c=>`<button class="chip ${c===category?"active":""}" data-cat="${esc(c)}">${esc(c)}</button>`).join("");
+ const term=$("search").value.trim().toLowerCase();
+ const list=all.filter(d=>(category==="All"||d.category===category)&&[d.name,d.category,d.description].join(" ").toLowerCase().includes(term));
+ $("designCount").textContent=all.length+" designs";
+ if(!list.length){$("gallery").innerHTML='<div class="empty"><h3>No matching designs</h3><p>Try a different search or category.</p></div>';return}
+ $("gallery").innerHTML=list.map(d=>{
+  const m=coverFor(d),r=stats(d.id);
+  return `<article class="card"><div class="cover" data-view="${esc(d.id)}" role="button" tabindex="0" aria-label="Preview ${esc(d.name)}">${mediaHTML(m,`alt="${esc(d.name)}"`)}<span class="pill" style="position:absolute;top:8px;left:8px">${esc(d.category)}</span></div><div class="card-body"><span class="pill">${esc(availName(d.availability))}</span><h3>${esc(d.name)}</h3><p class="muted" style="font-size:12px">${esc(d.description||"Contact us to learn more.")}</p><div class="price">${money(d.price)}</div><div class="muted" style="font-size:11px">${r.count?stars(r.avg)+" · "+r.count+" review(s)":"No reviews yet"}</div><div class="card-actions"><button class="btn light" data-view="${esc(d.id)}">Preview</button><a class="btn blue" href="${esc(wa(inquiry(d)))}" target="_blank" rel="noopener">Enquire ↗</a></div></div></article>`;
+ }).join("");
+}
+function renderNotice(){
+ const a=data.announcements.filter(x=>x.state==="published").sort((x,y)=>y.createdAt-x.createdAt)[0];
+ $("notice").hidden=!a;
+ if(a){$("noticeTitle").textContent=a.title;$("noticeBody").textContent=a.body}
+}
+function renderAll(){renderGallery();renderAdmin();renderNotice();renderFeedbackAdmin()}
+function openModal(id){$(id).classList.add("show");document.body.style.overflow="hidden"}
+function closeModal(id){$(id).classList.remove("show");if(!document.querySelector(".modal.show"))document.body.style.overflow=""}
+function showDesign(id){
+ const d=data.designs.find(x=>x.id===id&&!x.hidden);if(!d)return;
+ detailId=id;detailMedia=Math.min(Number(d.coverIndex)||0,Math.max(0,mediaFor(d).length-1));rating=5;renderDetail();openModal("detailModal")
+}
+function renderDetail(){
+ const d=data.designs.find(x=>x.id===detailId);if(!d)return;
+ const ms=mediaFor(d),m=ms[detailMedia],r=stats(d.id);
+ const items=data.interactions.filter(x=>x.designId===d.id&&!x.hidden);
+ $("detailContent").innerHTML=`<div class="detail-grid"><div><div class="detail-media">${mediaHTML(m,`alt="${esc(d.name)}"`).replace("<img ","<img style='width:100%;height:100%;object-fit:contain;background:#edf0f7' ")}</div><div class="thumbs">${ms.map((x,i)=>`<button class="thumb ${i===detailMedia?"active":""}" data-media="${i}" aria-label="Show media ${i+1}" style="padding:0;overflow:hidden">${mediaHTML(x,"")}</button>`).join("")}</div></div><div><div class="eyebrow">C.N.S FASHION</div><h2>${esc(d.name)}</h2><span class="pill">${esc(d.category)}</span><span class="pill">${esc(availName(d.availability))}</span><div class="price">${money(d.price)}</div><p>${esc(d.description||"Contact us for details.")}</p><p class="muted">${esc(typeName(d.type))}</p><a class="btn blue" href="${esc(wa(inquiry(d)))}" target="_blank" rel="noopener">Ask on WhatsApp ↗</a><hr><h3>Customer Reviews</h3><p>${r.count?stars(r.avg)+" "+r.avg.toFixed(1)+" / 5":"No reviews yet"}</p><form id="reviewForm" class="review-form"><label>Your name (optional)</label><input id="rName" maxlength="60"><label>Rating</label><select id="rRating"><option value="5">★★★★★ Excellent</option><option value="4">★★★★ Very good</option><option value="3">★★★ Good</option><option value="2">★★ Fair</option><option value="1">★ Poor</option></select><label>Your review</label><textarea id="rBody" required maxlength="1200"></textarea><button class="btn blue">Post review</button></form><div>${items.filter(x=>x.kind==="review").map(x=>`<div class="review"><strong>${esc(x.name||"Anonymous customer")}</strong><div>${stars(x.rating)}</div><p>${esc(x.body)}</p>${x.reply?`<p><strong>C.N.S FASHION reply:</strong> ${esc(x.reply)}</p>`:""}</div>`).join("")||'<p class="muted">Be the first to review this design.</p>'}</div><hr><h3>Questions & Answers</h3><form id="questionForm" class="review-form"><label>Your name (optional)</label><input id="qName" maxlength="60"><label>Your question</label><textarea id="qBody" required maxlength="1200"></textarea><button class="btn blue">Post question</button></form><div>${items.filter(x=>x.kind==="question").map(x=>`<div class="review"><strong>${esc(x.name||"Anonymous customer")}</strong><p>${esc(x.body)}</p>${x.reply?`<p><strong>C.N.S FASHION reply:</strong> ${esc(x.reply)}</p>`:""}</div>`).join("")||'<p class="muted">No questions yet.</p>'}</div></div></div>`;
+}
+function renderAdmin(){
+ $("adminList").innerHTML=data.designs.map(d=>`<div class="admin-item">${mediaHTML(coverFor(d)||{type:"image",src:"https://placehold.co/100x120"})}<div class="grow"><strong>${esc(d.name)}</strong><br>${money(d.price)} · ${esc(d.category)}<br>${d.hidden?"Hidden":"Public"}</div><div class="actions"><button class="btn light" data-edit="${esc(d.id)}">Edit</button><button class="btn light" data-hide="${esc(d.id)}">${d.hidden?"Publish":"Hide"}</button><button class="btn danger" data-delete="${esc(d.id)}">Delete</button></div></div>`).join("")||"<p>No designs.</p>";
+ $("noticeAdmin").innerHTML=data.announcements.map(a=>`<div class="review"><strong>${esc(a.title)}</strong><p>${esc(a.body)}</p><p>${a.state}</p><button class="btn light" data-notice-toggle="${esc(a.id)}">${a.state==="published"?"Unpublish":"Publish"}</button><button class="btn danger" data-notice-delete="${esc(a.id)}">Delete</button></div>`).join("");
+}
+function renderFeedbackAdmin(){
+ $("feedbackAdmin").innerHTML=data.interactions.map(x=>`<div class="review"><strong>${esc(x.kind)} · ${esc(x.name||"Anonymous")}</strong><p>${esc(x.body)}</p><label>Owner reply</label><textarea id="reply-${esc(x.id)}">${esc(x.reply||"")}</textarea><button class="btn blue" data-reply="${esc(x.id)}">Save reply</button> <button class="btn light" data-feedback-hide="${esc(x.id)}">${x.hidden?"Restore":"Hide"}</button> <button class="btn danger" data-feedback-delete="${esc(x.id)}">Delete</button></div>`).join("")||"<p>No customer feedback yet.</p>";
+}
+function setTab(id){document.querySelectorAll(".tab").forEach(b=>b.classList.toggle("active",b.dataset.tab===id));document.querySelectorAll(".pane").forEach(p=>p.classList.toggle("active",p.id===id))}
+function resetForm(){
+ editId=null;editMedia=[];$("designForm").reset();$("formTitle").textContent="Add a Fashion Design";$("saveDesign").textContent="Add Design";$("cancelEdit").hidden=true;$("mediaPreview").innerHTML="";$("dCover").innerHTML='<option value="0">First media item</option>';$("designStatus").textContent="";
+}
+function editDesign(id){
+ const d=data.designs.find(x=>x.id===id);if(!d)return;
+ editId=id;editMedia=mediaFor(d).map(m=>({...m}));
+ $("dName").value=d.name;$("dCategory").value=d.category;$("dPrice").value=d.price;$("dType").value=d.type||"both";$("dAvailability").value=d.availability||"available";$("dDescription").value=d.description||"";$("dURL").value="";$("dFiles").value="";
+ $("formTitle").textContent="Edit Fashion Design";$("saveDesign").textContent="Save Changes";$("cancelEdit").hidden=false;renderMediaPreview();$("designPane").scrollIntoView({behavior:"smooth"});
+}
+function renderMediaPreview(){
+ $("mediaPreview").innerHTML=editMedia.map((m,i)=>`<div class="preview">${mediaHTML(m,"")}<button type="button" data-remove-media="${i}" aria-label="Remove media">×</button></div>`).join("");
+ $("dCover").innerHTML=editMedia.map((m,i)=>`<option value="${i}" ${i===(Number(data.designs.find(d=>d.id===editId)?.coverIndex)||0)?"selected":""}>${m.type==="video"?"Video":"Picture"} ${i+1}</option>`).join("")||'<option value="0">First media item</option>';
+}
+function readFile(file){return new Promise((resolve,reject)=>{const r=new FileReader();r.onload=()=>resolve({type:file.type.startsWith("video/")?"video":"image",src:r.result,name:file.name});r.onerror=()=>reject(new Error("Could not read "+file.name));r.readAsDataURL(file)})}
+$("dFiles").addEventListener("change",async()=>{
+ try{
+  const files=[...$("dFiles").files];let total=editMedia.length;
+  for(const f of files){
+   if(!f.type.startsWith("image/")&&!f.type.startsWith("video/"))throw Error(f.name+" is not an image or video");
+   if(f.type.startsWith("image/")&&f.size>MAX_IMAGE)throw Error(f.name+" is larger than 2 MB");
+   if(f.type.startsWith("video/")&&f.size>MAX_VIDEO)throw Error(f.name+" is larger than 8 MB");
+  }
+  if(total+files.length>MAX_MEDIA)throw Error("Maximum "+MAX_MEDIA+" media items per design.");
+  for(const f of files)editMedia.push(await readFile(f));
+  renderMediaPreview();toast("Preview ready. Save the design to keep it.");
+ }catch(e){toast(e.message)}
+});
+$("designForm").addEventListener("submit",e=>{
+ e.preventDefault();
+ if(!owner)return;
+ const name=$("dName").value.trim(),price=Number($("dPrice").value),url=$("dURL").value.trim();
+ if(!name||!Number.isFinite(price)||price<=0){$("designStatus").textContent="Enter a design name and a price greater than zero.";return}
+ let ms=[...editMedia];
+ if(url)ms.push({type:/\.(mp4|webm|ogg)(\?|$)/i.test(url)?"video":"image",src:normalizeDrive(url),name:"Online media"});
+ if(!editId&&!ms.length){$("designStatus").textContent="Upload a picture/video or enter a media URL.";return}
+ if(ms.length>MAX_MEDIA){$("designStatus").textContent="Maximum "+MAX_MEDIA+" media items.";return}
+ const old=data.designs.find(d=>d.id===editId);
+ const d={...(old||{}),id:editId||uid(),name,category:$("dCategory").value,price,type:$("dType").value,availability:$("dAvailability").value,description:$("dDescription").value.trim(),media:ms,coverIndex:Math.min(Number($("dCover").value)||0,Math.max(0,ms.length-1)),hidden:old?.hidden||false,updatedAt:Date.now()};
+ if(old)data.designs=data.designs.map(x=>x.id===editId?d:x);else data.designs.unshift(d);
+ save();renderAll();resetForm();$("designStatus").textContent="Saved in this browser.";toast("Design saved.");
+});
+$("mediaPreview").addEventListener("click",e=>{
+ const b=e.target.closest("[data-remove-media]");if(!b)return;
+ editMedia.splice(Number(b.dataset.removeMedia),1);renderMediaPreview();
+});
+$("cancelEdit").addEventListener("click",resetForm);
+$("adminList").addEventListener("click",e=>{
+ const ed=e.target.closest("[data-edit]"),hd=e.target.closest("[data-hide]"),dl=e.target.closest("[data-delete]");
+ if(ed){editDesign(ed.dataset.edit);return}
+ if(hd){const d=data.designs.find(x=>x.id===hd.dataset.hide);if(d)d.hidden=!d.hidden;save();renderAll();return}
+ if(dl&&confirm("Delete this design and its reviews/questions?")){const id=dl.dataset.delete;data.designs=data.designs.filter(x=>x.id!==id);data.interactions=data.interactions.filter(x=>x.designId!==id);save();renderAll()}
+});
+$("noticeForm").addEventListener("submit",e=>{
+ e.preventDefault();data.announcements.unshift({id:uid(),title:$("nTitle").value.trim(),body:$("nBody").value.trim(),state:$("nState").value,createdAt:Date.now()});save();$("noticeForm").reset();renderAll();toast("Announcement saved.");
+});
+$("noticeAdmin").addEventListener("click",e=>{
+ const t=e.target.closest("[data-notice-toggle]"),d=e.target.closest("[data-notice-delete]");
+ if(t){const a=data.announcements.find(x=>x.id===t.dataset.noticeToggle);if(a)a.state=a.state==="published"?"draft":"published"}
+ if(d)data.announcements=data.announcements.filter(x=>x.id!==d.dataset.noticeDelete);
+ save();renderAll();
+});
+$("feedbackAdmin").addEventListener("click",e=>{
+ const r=e.target.closest("[data-reply]"),h=e.target.closest("[data-feedback-hide]"),d=e.target.closest("[data-feedback-delete]");
+ if(r){const x=data.interactions.find(x=>x.id===r.dataset.reply);if(x)x.reply=$("reply-"+x.id).value.trim()}
+ if(h){const x=data.interactions.find(x=>x.id===h.dataset.feedbackHide);if(x)x.hidden=!x.hidden}
+ if(d)data.interactions=data.interactions.filter(x=>x.id!==d.dataset.feedbackDelete);
+ save();renderAll();
+});
+$("detailContent").addEventListener("click",e=>{
+ const m=e.target.closest("[data-media]");if(m){detailMedia=Number(m.dataset.media);renderDetail()}
+});
+$("detailContent").addEventListener("submit",e=>{
+ if(e.target.id!=="reviewForm"&&e.target.id!=="questionForm")return;
+ e.preventDefault();const review=e.target.id==="reviewForm";
+ data.interactions.unshift({id:uid(),designId:detailId,kind:review?"review":"question",name:$(review?"rName":"qName").value.trim(),body:$(review?"rBody":"qBody").value.trim(),rating:review?Number($("rRating").value):null,reply:"",hidden:false,createdAt:Date.now()});
+ save();renderDetail();renderGallery();renderFeedbackAdmin();toast("Your message has been posted on this browser.");
+});
+$("gallery").addEventListener("click",e=>{const b=e.target.closest("[data-view]");if(b)showDesign(b.dataset.view)});
+$("gallery").addEventListener("keydown",e=>{if((e.key==="Enter"||e.key===" ")&&e.target.matches("[data-view]"))showDesign(e.target.dataset.view)});
+$("categories").addEventListener("click",e=>{const b=e.target.closest("[data-cat]");if(b){category=b.dataset.cat;renderGallery()}});
+$("search").addEventListener("input",renderGallery);
+$("clearSearch").addEventListener("click",()=>{$("search").value="";category="All";renderGallery()});
+$("menuBtn").addEventListener("click",()=>$("navlinks").classList.toggle("open"));
+$("navlinks").addEventListener("click",e=>{if(e.target.closest("a"))$("navlinks").classList.remove("open")});
+document.querySelectorAll("[data-close]").forEach(b=>b.addEventListener("click",()=>closeModal(b.dataset.close)));
+document.querySelectorAll(".modal").forEach(m=>m.addEventListener("click",e=>{if(e.target===m)closeModal(m.id)}));
+document.addEventListener("keydown",e=>{if(e.key==="Escape")document.querySelectorAll(".modal.show").forEach(m=>closeModal(m.id))});
+document.querySelectorAll(".tab").forEach(b=>b.addEventListener("click",()=>setTab(b.dataset.tab)));
+$("adminOpen").addEventListener("click",()=>openModal("pinModal"));
+$("pinForm").addEventListener("submit",e=>{
+ e.preventDefault();if($("pin").value!==OWNER_PIN){$("pinError").textContent="Incorrect PIN.";return}
+ owner=true;$("pinError").textContent="";$("pin").value="";closeModal("pinModal");openModal("adminModal");renderAll();
+});
+$("logout").addEventListener("click",()=>{owner=false;resetForm();closeModal("adminModal")});
+$("exportBtn").addEventListener("click",()=>{
+ const blob=new Blob([JSON.stringify({format:"CNS-FASHION-BACKUP",version:3,...data},null,2)],{type:"application/json"});
+ const u=URL.createObjectURL(blob),a=document.createElement("a");a.href=u;a.download="cns-fashion-backup.json";a.click();setTimeout(()=>URL.revokeObjectURL(u),2000);
+ $("backupStatus").textContent="Backup exported. Keep the file safely.";
+});
+$("importBtn").addEventListener("click",async()=>{
+ try{
+  const f=$("importFile").files[0];if(!f)throw Error("Choose a backup JSON file first.");
+  const x=JSON.parse(await f.text());if(!Array.isArray(x.designs)||!Array.isArray(x.announcements)||!Array.isArray(x.interactions))throw Error("This backup file is not recognised.");
+  if(!confirm("Replace all current local data with this backup?"))return;
+  data={designs:x.designs,announcements:x.announcements,interactions:x.interactions};save();renderAll();$("backupStatus").textContent="Backup restored.";
+ }catch(e){$("backupStatus").textContent=e.message}
+});
+$("year").textContent=new Date().getFullYear();
+$("heroWA").href=wa("Hello C.N.S FASHION! I would like to enquire about your fashion designs.");
+$("contactWA").href=wa("Hello C.N.S FASHION! I would like to enquire about your fashion design services in Kasoa.");
+$("floatingWA").href=wa("Hello C.N.S FASHION! I would like to ask about your fashion collection.");
+
+/* Start without requiring IndexedDB. The public gallery always renders first. */
+load();
+</script>
+</body>
+</html>

@@ -1,0 +1,664 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#102D72">
+<meta name="description" content="Discover African-inspired fashion, Ankara styles, gowns and custom clothing at C.N.S FASHION, Kasoa, Ghana.">
+<title>C.N.S FASHION | Your Style. Our Craft.</title>
+
+<style>
+:root{--blue:#123580;--dark:#0b2051;--gold:#c9a454;--goldlight:#f0d99a;--bg:#f7f8fc;--ink:#17233c;--muted:#6c768b;--line:#e3e8f1;--green:#168653;--red:#b42332;--shadow:0 12px 36px #11285617;--radius:16px}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:85px}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:Arial,Helvetica,sans-serif;line-height:1.55}
+button,input,select,textarea{font:inherit}
+button,a{-webkit-tap-highlight-color:transparent}
+button{cursor:pointer}
+button:disabled{opacity:.55;cursor:not-allowed}
+a{color:inherit}
+img,video{max-width:100%}
+.wrap{width:min(1240px,92%);margin:auto}
+section{padding:70px 0}
+h1,h2,.serif{font-family:Georgia,"Times New Roman",serif}
+h1{font-size:clamp(40px,7vw,76px);line-height:1.06;margin:16px 0}
+h2{font-size:clamp(29px,4vw,43px);line-height:1.15;margin:0 0 13px}
+h3{line-height:1.3}
+p{overflow-wrap:anywhere}
+.muted{color:var(--muted)}
+.small{font-size:12px}
+.eyebrow{color:var(--gold);font-size:11px;font-weight:800;letter-spacing:2px;text-transform:uppercase}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:7px;border:1px solid transparent;border-radius:9px;padding:12px 16px;font-size:13px;font-weight:750;text-decoration:none;line-height:1.4}
+.btn:hover{filter:brightness(.97)}
+.btn-blue{background:var(--blue);color:white}
+.btn-gold{background:var(--gold);color:#17233c}
+.btn-light{background:white;color:var(--blue);border-color:var(--line)}
+.btn-danger{background:#fff0f0;color:#a31e2a;border-color:#f1c7cb}
+.btn-block{width:100%}
+input,select,textarea{width:100%;border:1px solid #dce3ef;border-radius:9px;padding:12px;background:white;color:var(--ink);min-width:0}
+input:focus,select:focus,textarea:focus{outline:2px solid #244b9a40;border-color:var(--blue)}
+textarea{min-height:100px;resize:vertical}
+label{display:block;font-size:12px;font-weight:750;margin-bottom:7px}
+.field{margin-bottom:14px;min-width:0}
+.field small{display:block;color:var(--muted);font-size:11px;margin-top:5px}
+.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+hr{border:0;border-top:1px solid var(--line);margin:24px 0}
+header{position:sticky;top:0;z-index:20;background:#0b2051;color:white;box-shadow:0 3px 20px #081b4420}
+.nav{min-height:73px;display:flex;align-items:center;justify-content:space-between;gap:16px}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none;min-width:0}
+.brand-mark{width:42px;height:42px;border:1.5px solid var(--gold);border-radius:50%;display:grid;place-items:center;color:var(--goldlight);font-family:Georgia,serif;font-weight:bold;flex-shrink:0}
+.brand-copy{display:flex;flex-direction:column;line-height:1.2}
+.brand-copy strong{font-family:Georgia,serif;letter-spacing:1px;font-size:18px}
+.brand-copy span{font-size:9px;letter-spacing:1.6px;color:var(--goldlight);margin-top:5px}
+.navlinks{display:flex;align-items:center;gap:19px}
+.navlinks>a{font-size:12px;text-decoration:none;color:#f5f7ff}
+.menu-btn{display:none;background:transparent;color:white;border:1px solid #ffffff55;border-radius:8px;padding:9px 12px}
+.hero{padding:0;background:var(--dark);color:white;overflow:hidden}
+.hero-inner{min-height:540px;display:grid;grid-template-columns:1fr .9fr;align-items:center;gap:35px;padding-top:55px;padding-bottom:55px}
+.hero-copy{position:relative;z-index:1}
+.hero h1 span{color:var(--goldlight)}
+.hero-copy>p{color:#d8e0f3;max-width:500px;line-height:1.9;font-size:15px}
+.hero-actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:25px}
+.hero .btn-light{background:transparent;border-color:#ffffff60;color:white}
+.hero-trust{display:flex;gap:18px;flex-wrap:wrap;margin-top:30px;font-size:11px;color:#d8e0f3}
+.hero-trust span:before{content:"✦";color:var(--gold);margin-right:7px}
+.hero-art{position:relative;min-width:0}
+.hero-image{width:100%;height:440px;object-fit:cover;object-position:center 30%;border-radius:170px 170px 14px 14px;border:1px solid #d4b76d70;background:#20345e}
+.hero-stamp{position:absolute;bottom:22px;left:-20px;background:var(--gold);color:var(--dark);border-radius:12px;padding:15px 18px;box-shadow:var(--shadow);max-width:225px}
+.hero-stamp strong{display:block;font: bold 18px Georgia,serif}
+.hero-stamp span{font-size:11px}
+.notice-strip{background:#fff6df;border-bottom:1px solid #f0dfb2}
+.notice-strip-inner{display:flex;align-items:center;gap:12px;padding:12px 0}
+.notice-symbol{width:35px;height:35px;flex-shrink:0;border-radius:9px;background:#f2e0b1;color:#76541b;display:grid;place-items:center}
+.notice-copy{flex:1;min-width:0}
+.notice-copy strong{font-size:12px;display:block}
+.notice-copy p{font-size:12px;margin:2px 0 0;white-space:pre-wrap}
+.hidden{display:none!important}
+.section-head{display:flex;justify-content:space-between;align-items:end;gap:20px;margin-bottom:25px}
+.section-intro{max-width:700px}
+.search-row{display:flex;gap:10px;margin-bottom:17px}
+.search-row input{flex:1}
+.categories{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:25px}
+.chip{background:white;border:1px solid var(--line);border-radius:30px;padding:9px 13px;font-size:11px;font-weight:750;color:var(--muted)}
+.chip.active{background:var(--blue);border-color:var(--blue);color:white}
+.product-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:18px}
+.product{background:white;border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;min-width:0}
+.product-cover{position:relative;background:#e8edf6;overflow:hidden;cursor:pointer}
+.product-cover img,.product-cover video{width:100%;height:300px;object-fit:cover;display:block;background:#e8edf6}
+.product-badge{position:absolute;top:10px;left:10px;border-radius:6px;background:#fffffff2;color:var(--blue);padding:5px 8px;font-size:9px;font-weight:850;text-transform:uppercase}
+.media-count{position:absolute;right:9px;bottom:9px;background:#071a3bd9;color:white;border-radius:6px;padding:5px 8px;font-size:10px}
+.product-body{padding:14px}
+.product-meta{display:flex;align-items:center;justify-content:space-between;gap:7px;flex-wrap:wrap}
+.tag,.pill{display:inline-flex;align-items:center;max-width:100%;background:#edf2fc;color:var(--blue);padding:5px 8px;border-radius:5px;font-size:9px;font-weight:850}
+.pill{border-radius:30px;font-size:10px}
+.green-pill{background:#e8f8ef;color:#147547}
+.red-pill{background:#fff0f0;color:#a31e2a}
+.gold-pill{background:#fff5d9;color:#805b14}
+.product h3{font:bold 19px Georgia,serif;margin:11px 0 6px}
+.product-desc{font-size:12px;color:var(--muted);min-height:38px;margin-bottom:10px}
+.price{font-weight:850;color:var(--blue);font-size:20px}
+.stars{color:#c28d21;letter-spacing:1px;white-space:nowrap}
+.review-summary{display:flex;align-items:center;gap:6px;flex-wrap:wrap;font-size:11px;color:var(--muted);margin:9px 0}
+.product-actions{display:flex;gap:8px;margin-top:13px}
+.product-actions .btn{flex:1;padding:10px 7px;font-size:11px}
+.empty{grid-column:1/-1;background:white;border:1px dashed #cbd4e4;border-radius:15px;text-align:center;padding:40px 18px;color:var(--muted)}
+.empty strong{display:block;color:var(--ink);font: bold 22px Georgia,serif;margin-bottom:7px}
+.band{background:#edf2fc}
+.about-grid{display:grid;grid-template-columns:1fr 1fr;align-items:center;gap:45px}
+.about-img{width:100%;height:410px;object-fit:cover;border-radius:18px;background:#e8edf6}
+.about-copy p{color:var(--muted);line-height:1.9;font-size:14px}
+.features{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:30px}
+.feature{background:white;border:1px solid var(--line);border-radius:13px;padding:20px}
+.feature-icon{font-size:23px;color:var(--gold)}
+.feature strong{display:block;font: bold 17px Georgia,serif;margin:9px 0 6px}
+.feature p{font-size:12px;color:var(--muted);margin:0}
+.contact-panel{background:var(--dark);color:white;border-radius:20px;padding:32px}
+.contact-panel p{color:#d6deef;font-size:13px;line-height:1.8}
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:28px;align-items:center}
+.contact-line{display:flex;gap:12px;align-items:start;margin:16px 0}
+.contact-line>span{color:var(--goldlight);font-size:19px}
+footer{background:#081a43;color:#d4dcef;padding:30px 0 20px}
+.footer-main{display:flex;justify-content:space-between;gap:25px;flex-wrap:wrap}
+.footer-main p{font-size:12px;color:#b5c3df}
+.footer-bottom{border-top:1px solid #ffffff25;margin-top:22px;padding-top:16px;font-size:11px;color:#aab8d4;display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+.fab{position:fixed;right:16px;bottom:16px;z-index:15;background:#13874e;color:white;border-radius:50px;padding:13px 17px;text-decoration:none;font-size:12px;font-weight:850;box-shadow:0 8px 25px #0003}
+.modal{position:fixed;inset:0;z-index:50;background:#06112de8;display:none;align-items:center;justify-content:center;padding:12px;overflow-y:auto}
+.modal.show{display:flex}
+.modal-card{width:min(900px,100%);max-height:95vh;max-height:95dvh;overflow:auto;background:white;border-radius:17px;padding:24px;position:relative;box-shadow:0 25px 100px #0005}
+.modal-card.narrow{max-width:420px}
+.close{position:sticky;float:right;top:0;z-index:3;border:1px solid var(--line);background:white;color:var(--ink);width:35px;height:35px;border-radius:50%;font-size:23px;line-height:1}
+.detail-grid{display:grid;grid-template-columns:1fr 1fr;gap:25px;clear:both}
+.detail-media,.detail-copy{min-width:0}
+.detail-main{width:100%;height:420px;object-fit:contain;background:#eef1f7;border-radius:11px;display:block}
+.detail-main.video{object-fit:contain}
+.media-thumbs{display:flex;gap:8px;overflow-x:auto;margin-top:10px;padding-bottom:5px}
+.media-thumb{border:2px solid transparent;border-radius:8px;overflow:hidden;width:65px;height:75px;flex:0 0 65px;background:#edf0f7;padding:0}
+.media-thumb.active{border-color:var(--gold)}
+.media-thumb img,.media-thumb video{width:100%;height:100%;object-fit:cover}
+.detail-copy{padding-top:10px}
+.detail-copy h2{font-size:31px;margin-top:12px}
+.detail-copy .price{font-size:26px;margin:13px 0}
+.detail-copy p{font-size:13px;color:var(--muted);line-height:1.8}
+.detail-actions{display:grid;gap:9px;margin-top:17px}
+.reviews-section{margin-top:28px;padding-top:23px;border-top:1px solid var(--line)}
+.reviews-head{display:flex;justify-content:space-between;align-items:start;gap:15px;flex-wrap:wrap}
+.reviews-head h3{font:bold 23px Georgia,serif;margin:0}
+.rating-big{font:bold 29px Georgia,serif;color:var(--blue)}
+.review-form{background:#f5f7fc;border:1px solid var(--line);border-radius:12px;padding:16px;margin:17px 0}
+.star-picker{display:flex;gap:5px}
+.star-choice{border:0;background:transparent;font-size:27px;color:#d0d5df;padding:2px}
+.star-choice.active{color:#c28d21}
+.review-list{display:grid;gap:11px}
+.review-card{border:1px solid var(--line);border-radius:11px;padding:14px}
+.review-top{display:flex;justify-content:space-between;gap:10px;align-items:start}
+.review-name{font-weight:800;font-size:12px}
+.review-date{font-size:10px;color:var(--muted)}
+.review-body{font-size:13px;line-height:1.8;margin:9px 0 0;white-space:pre-wrap}
+.owner-reply{background:#edf3ff;border-left:3px solid var(--blue);padding:11px;margin-top:12px;border-radius:0 8px 8px 0;font-size:12px}
+.owner-reply strong{display:block;margin-bottom:5px;color:var(--blue)}
+.qa-label{font-size:9px;letter-spacing:1px;font-weight:900;color:var(--blue);text-transform:uppercase}
+.admin-note{padding:13px;border-radius:10px;background:#fff6df;color:#71551e;font-size:12px;line-height:1.7;margin:16px 0}
+.admin-tabs{display:flex;gap:7px;overflow-x:auto;margin:18px 0;padding-bottom:5px}
+.admin-tab{flex:0 0 auto;border:1px solid var(--line);background:white;border-radius:8px;padding:10px 12px;color:var(--muted);font-weight:800;font-size:11px}
+.admin-tab.active{background:var(--blue);color:white}
+.admin-pane{display:none}
+.admin-pane.active{display:block}
+.admin-list{display:grid;gap:10px}
+.admin-item{border:1px solid var(--line);border-radius:11px;padding:12px;display:flex;align-items:center;gap:11px;background:white;min-width:0}
+.admin-item img,.admin-thumb{width:55px;height:65px;object-fit:cover;border-radius:7px;background:#edf0f7;flex-shrink:0}
+.admin-item .grow{flex:1;min-width:0;font-size:12px}
+.admin-item .grow strong{display:block;overflow-wrap:anywhere}
+.admin-actions{display:flex;gap:6px;flex-wrap:wrap}
+.admin-actions .btn{padding:8px 10px;font-size:10px}
+.admin-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin:16px 0}
+.stat-card{background:#f4f6fb;border:1px solid var(--line);border-radius:11px;padding:14px}
+.stat-card span{display:block;font-size:10px;color:var(--muted)}
+.stat-card strong{font:bold 24px Georgia,serif;color:var(--blue)}
+.media-preview-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:9px;margin:12px 0}
+.media-preview{position:relative;background:#edf0f7;border-radius:9px;overflow:hidden;aspect-ratio:3/4}
+.media-preview img,.media-preview video{width:100%;height:100%;object-fit:cover}
+.media-preview button{position:absolute;right:5px;top:5px;border:0;border-radius:50%;background:#071a3be8;color:white;width:27px;height:27px}
+.media-preview .cover-btn{left:5px;right:auto;top:auto;bottom:5px;width:auto;height:auto;border-radius:5px;padding:5px 7px;font-size:9px;background:var(--gold);color:#17233c}
+.status{font-size:12px;margin-top:10px;min-height:18px;color:var(--blue)}
+.status.error{color:var(--red)}
+.status.success{color:var(--green)}
+.announcement-admin{border:1px solid var(--line);border-radius:11px;padding:13px;margin-bottom:10px}
+.announcement-admin h4{margin:8px 0}
+.announcement-admin p{font-size:12px;white-space:pre-wrap}
+.notice-empty{padding:23px;text-align:center;color:var(--muted);border:1px dashed var(--line);border-radius:10px;font-size:12px}
+#pinError{color:var(--red);font-size:12px;min-height:18px}
+#toast{position:fixed;left:50%;bottom:75px;transform:translateX(-50%);z-index:100;background:#102d72;color:white;padding:12px 17px;border-radius:10px;box-shadow:var(--shadow);font-size:12px;max-width:90%;display:none}
+#toast.show{display:block}
+@media(max-width:1000px){.product-grid{grid-template-columns:repeat(3,minmax(0,1fr))}.product-cover img,.product-cover video{height:270px}.hero-image{height:390px}.navlinks{gap:12px}}
+@media(max-width:720px){
+ section{padding:50px 0}.nav{min-height:66px}.brand-copy strong{font-size:16px}.brand-mark{width:37px;height:37px}
+ .menu-btn{display:block}.navlinks{display:none;position:absolute;top:66px;left:0;right:0;background:var(--dark);padding:17px 5% 22px;flex-direction:column;align-items:stretch;gap:14px}
+ .navlinks.open{display:flex}.navlinks a{padding:4px 0}
+ .hero-inner{grid-template-columns:1fr;gap:32px;padding-top:48px;padding-bottom:60px}.hero-copy>p{font-size:14px}
+ .hero-art{width:min(430px,90%);margin:auto}.hero-image{height:370px;border-radius:140px 140px 12px 12px}.hero-stamp{left:-12px;bottom:12px}
+ .section-head{align-items:start;flex-direction:column}.product-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:11px}
+ .product-cover img,.product-cover video{height:230px}.product-body{padding:11px}.product h3{font-size:17px}.product-desc{font-size:11px;min-height:45px}
+ .product-actions{flex-direction:column}.product-actions .btn{width:100%}
+ .about-grid,.contact-grid,.detail-grid{grid-template-columns:1fr;gap:23px}.about-img{height:290px}.features{grid-template-columns:1fr}
+ .contact-panel{padding:24px 18px}.modal{padding:6px}.modal-card{padding:17px 13px;border-radius:12px}
+ .detail-main{height:330px}.detail-copy h2{font-size:27px}.form-grid{grid-template-columns:1fr;gap:0}
+ .media-preview-grid{grid-template-columns:repeat(3,minmax(0,1fr))}.admin-stats{grid-template-columns:1fr 1fr}
+ .admin-item{flex-wrap:wrap}.admin-item .grow{flex-basis:calc(100% - 80px)}.admin-actions{width:100%}
+ .fab{right:9px;bottom:9px;padding:12px 14px}.hero-trust{gap:10px}
+}
+@media(max-width:380px){.product-cover img,.product-cover video{height:190px}.product h3{font-size:15px}.product-body{padding:9px}.price{font-size:17px}.hero-image{height:310px}.brand-copy span{letter-spacing:1px}}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{scroll-behavior:auto!important;transition:none!important}}
+</style>
+</head>
+
+<body>
+<header>
+<div class="wrap nav">
+<a href="#home" class="brand" aria-label="C.N.S FASHION home"><span class="brand-mark">CNS</span><span class="brand-copy"><strong>C.N.S FASHION</strong><span>YOUR STYLE. OUR CRAFT.</span></span></a>
+<button class="menu-btn" id="menuBtn" type="button" aria-label="Toggle navigation" aria-expanded="false">☰</button>
+<nav class="navlinks" id="navlinks">
+<a href="#home">Home</a><a href="#collection">Collections</a><a href="#about">Our Story</a><a href="#contact">Contact</a>
+<button class="btn btn-gold" id="adminOpen" type="button">Owner's Area 🔒</button>
+</nav>
+</div>
+</header>
+
+<div id="announcementStrip" class="notice-strip hidden" aria-live="polite"><div class="wrap notice-strip-inner"><div class="notice-symbol" id="announcementSymbol">✦</div><div class="notice-copy"><strong id="announcementTitle">C.N.S FASHION UPDATE</strong><p id="announcementText"></p></div><span class="pill gold-pill" id="announcementKind">UPDATE</span></div></div>
+
+<main>
+<section class="hero" id="home"><div class="wrap hero-inner">
+<div class="hero-copy"><div class="eyebrow">African Inspiration · Modern Elegance</div><h1>Your Style.<br><span>Our Craft.</span></h1>
+<p>Discover beautiful designs that celebrate your individuality. From vibrant Ankara styles to elegant gowns, find a look that feels uniquely you.</p>
+<div class="hero-actions"><a class="btn btn-gold" href="#collection">Explore the Collection ↗</a><a class="btn btn-light" id="heroWhatsApp" href="https://wa.me/233257630640" target="_blank" rel="noopener noreferrer">Chat on WhatsApp</a></div>
+<div class="hero-trust"><span>African-inspired style</span><span>Custom designs</span><span>Kasoa, Ghana</span></div></div>
+<div class="hero-art"><img class="hero-image" src="https://images.unsplash.com/photo-1539109136881-3be0616acf4b?auto=format&fit=crop&w=1000&q=85" alt="Fashion editorial inspiration" fetchpriority="high"><div class="hero-stamp"><strong>Fashion That Feels Like You.</strong><span>Designed with creativity. Crafted with care.</span></div></div>
+</div></section>
+
+<section id="collection"><div class="wrap">
+<div class="section-head"><div class="section-intro"><div class="eyebrow">Discover your next look</div><h2>Explore Our Collection</h2><p class="muted">Browse designs, explore prices, watch videos and find your next favourite outfit.</p></div><span class="pill" id="designCount">Loading collection…</span></div>
+<div class="search-row"><input id="searchInput" type="search" placeholder="Search Ankara, gowns, office wear…" aria-label="Search fashion designs"><button id="clearSearch" type="button" class="btn btn-light">Clear</button></div>
+<div class="categories" id="categories" aria-label="Fashion categories"></div>
+<div class="product-grid" id="gallery" aria-live="polite"><div class="empty">Loading fashion collection…</div></div>
+</div></section>
+
+<section class="band" id="about"><div class="wrap">
+<div class="about-grid"><img class="about-img" src="https://images.unsplash.com/photo-1529139574466-a303027c1d8b?auto=format&fit=crop&w=1000&q=85" alt="Fashion inspiration" loading="lazy">
+<div class="about-copy"><div class="eyebrow">The C.N.S FASHION story</div><h2>Fashion that feels like you.</h2>
+<p>C.N.S FASHION is a fashion design brand based in Kasoa, Ghana. We bring African-inspired creativity and modern fashion together to help you express your individuality.</p>
+<p>Discover styles for everyday wear, work, parties, weddings and special occasions. Explore a design, then contact us to discuss your preferred fabric, colour, fit and tailoring requirements.</p><a class="btn btn-blue" href="#contact">Let's Talk Fashion ↗</a></div></div>
+<div class="features"><div class="feature"><span class="feature-icon">✦</span><strong>African Inspiration</strong><p>Creative styles inspired by Ankara, African fashion and modern trends.</p></div><div class="feature"><span class="feature-icon">◇</span><strong>Your Personal Style</strong><p>Discuss fabrics, measurements, colours and custom design preferences.</p></div><div class="feature"><span class="feature-icon">♡</span><strong>Made with Care</strong><p>Explore designs and connect directly with us to discuss your outfit.</p></div></div>
+</div></section>
+
+<section id="contact"><div class="wrap contact-panel"><div class="contact-grid">
+<div><div class="eyebrow">Let's create your look</div><h2>Have a design in mind?</h2><p>Found a style you love? Contact C.N.S FASHION to ask about availability, pricing, fabrics, custom tailoring and your preferred measurements.</p><a class="btn btn-gold" id="contactWhatsApp" href="https://wa.me/233257630640" target="_blank" rel="noopener noreferrer">Chat with Us on WhatsApp ↗</a></div>
+<div><div class="contact-line"><span>⌖</span><div><strong>Our Location</strong><br><span class="muted">Kasoa, Ghana</span></div></div><div class="contact-line"><span>✆</span><div><strong>WhatsApp Enquiries</strong><br><span class="muted">+233 25 763 0640</span></div></div><div class="contact-line"><span>✦</span><div><strong>Our Promise</strong><br><span class="muted">Your Style. Our Craft.</span></div></div></div>
+</div></div></section>
+</main>
+
+<footer><div class="wrap"><div class="footer-main">
+<div><a href="#home" class="brand"><span class="brand-mark">CNS</span><span class="brand-copy"><strong>C.N.S FASHION</strong><span>YOUR STYLE. OUR CRAFT.</span></span></a><p>Beautiful designs for every occasion.</p></div>
+<div><strong>Explore</strong><p><a href="#collection">Fashion Collection</a><br><a href="#about">Our Story</a><br><a href="#contact">Contact Us</a></p></div>
+<div><strong>Visit or Contact</strong><p>Kasoa, Ghana<br>WhatsApp: +233 25 763 0640</p></div>
+</div><div class="footer-bottom"><span>© <span id="year"></span> C.N.S FASHION. All rights reserved.</span><span>Your Style. Our Craft.</span></div></div></footer>
+
+<a class="fab" id="floatingWhatsApp" href="https://wa.me/233257630640" target="_blank" rel="noopener noreferrer">WhatsApp Us ↗</a>
+<div id="toast" role="status" aria-live="polite"></div>
+
+<div class="modal" id="detailModal" role="dialog" aria-modal="true" aria-label="Fashion design details"><div class="modal-card"><button class="close" data-close="detailModal" aria-label="Close details">×</button><div id="detailContent"></div></div></div>
+
+<div class="modal" id="pinModal" role="dialog" aria-modal="true" aria-labelledby="pinTitle"><div class="modal-card narrow"><button class="close" data-close="pinModal" aria-label="Close">×</button><div style="text-align:center;padding:15px 5px"><div style="font-size:40px">🔐</div><div class="eyebrow">Private management</div><h2 id="pinTitle">Owner Access</h2><p class="muted small">Enter your owner PIN to manage C.N.S FASHION.</p><form id="pinForm"><div class="field" style="text-align:left"><label for="ownerPin">Owner PIN</label><input id="ownerPin" type="password" autocomplete="current-password" maxlength="50" required placeholder="Enter PIN"></div><p id="pinError" role="alert"></p><button class="btn btn-blue btn-block" type="submit">Unlock Owner Dashboard</button><button class="btn btn-light btn-block" type="button" data-close="pinModal" style="margin-top:8px">Cancel</button></form></div></div></div>
+
+<div class="modal" id="adminModal" role="dialog" aria-modal="true" aria-label="Owner dashboard"><div class="modal-card">
+<button class="close" data-close="adminModal" aria-label="Close dashboard">×</button><div class="eyebrow">C.N.S FASHION · Management</div><h2>Owner Dashboard</h2><p class="muted small">Manage designs, media, prices, announcements, reviews and questions.</p>
+<div class="admin-note"><strong>Local storage mode:</strong> Data is saved in this browser on this device only. It does not synchronize between visitors or devices. The demo PIN is not secure online authentication. Use a real backend and authentication before relying on this dashboard publicly.</div>
+<div class="admin-stats"><div class="stat-card"><span>Total designs</span><strong id="statDesigns">0</strong></div><div class="stat-card"><span>Customer messages</span><strong id="statInteractions">0</strong></div><div class="stat-card"><span>Announcements</span><strong id="statAnnouncements">0</strong></div></div>
+<div class="admin-tabs" role="tablist"><button class="admin-tab active" data-tab="designsPane" type="button">Designs & Media</button><button class="admin-tab" data-tab="noticePane" type="button">Notice Board</button><button class="admin-tab" data-tab="feedbackPane" type="button">Reviews & Q&amp;A</button><button class="admin-tab" data-tab="backupPane" type="button">Backup & Restore</button></div>
+
+<div class="admin-pane active" id="designsPane"><h3 id="formHeading">Add a Fashion Design</h3>
+<form id="designForm">
+<div class="form-grid"><div class="field"><label for="designName">Design name *</label><input id="designName" required maxlength="90" placeholder="e.g. Elegant Ankara Gown"></div><div class="field"><label for="designCategory">Category *</label><select id="designCategory" required><option>African Wear</option><option>Ankara</option><option>Kente Inspired</option><option>Casual Dresses</option><option>Evening &amp; Party</option><option>Office Wear</option><option>Gowns</option><option>Skirts &amp; Blouses</option><option>Two-Piece Sets</option><option>Jumpsuits</option><option>Wedding Guest Outfits</option><option>Other Styles</option></select></div></div>
+<div class="form-grid"><div class="field"><label for="designPrice">Fixed price (GH₵) *</label><input id="designPrice" type="number" min="0.01" max="100000000" step="0.01" required placeholder="e.g. 250"></div><div class="field"><label for="designType">Clothing availability *</label><select id="designType" required><option value="both">Ready-made &amp; custom-made</option><option value="ready">Ready-made</option><option value="custom">Custom-made</option></select></div></div>
+<div class="field"><label for="designDescription">Design description</label><textarea id="designDescription" maxlength="1200" placeholder="Describe fabric, fit, colours and other details…"></textarea></div>
+<div class="field"><label for="designAvailability">Availability *</label><select id="designAvailability" required><option value="available">Available</option><option value="made-to-order">Made to order</option><option value="sold-out">Sold out</option><option value="unavailable">Currently unavailable</option></select></div>
+<div class="field"><label for="designMedia">Upload pictures and videos</label><input id="designMedia" type="file" accept="image/*,video/mp4,video/webm,video/ogg" multiple><small>Pictures: maximum 5 MB each. Videos: maximum 20 MB each. Supported video formats depend on the browser and device.</small></div>
+<div class="field"><label for="designImageUrl">Or add a picture URL</label><input id="designImageUrl" type="url" placeholder="https://example.com/fashion-picture.jpg"><small>Optional. Use a direct public image URL. Some websites block external image loading.</small></div>
+<div id="existingMediaArea" class="hidden"><label>Current media · Manage files and cover</label><div id="mediaPreviewGrid" class="media-preview-grid"></div><small class="muted">Remove media with ×. Choose a cover for the main gallery.</small></div>
+<div class="field"><label for="designCover">Cover image</label><select id="designCover"><option value="0">First picture</option></select></div>
+<button class="btn btn-blue" id="saveDesignBtn" type="submit">＋ Add Design</button> <button class="btn btn-light hidden" id="cancelEdit" type="button">Cancel Editing</button><p id="adminStatus" class="status" aria-live="polite"></p>
+</form><hr><h3>Manage Your Collection</h3><p class="muted small">Edit, hide or delete designs.</p><div class="admin-list" id="adminList"></div></div>
+
+<div class="admin-pane" id="noticePane"><h3>Public Announcement Board</h3><p class="muted small">Publish business updates, closures, promotions or important customer notices.</p>
+<form id="noticeForm"><div class="field"><label for="noticeTitleInput">Announcement heading *</label><input id="noticeTitleInput" maxlength="100" required></div><div class="field"><label for="noticeBodyInput">Announcement message *</label><textarea id="noticeBodyInput" maxlength="2000" required></textarea></div><div class="form-grid"><div class="field"><label for="noticeKindInput">Notice type</label><select id="noticeKindInput"><option value="update">Business Update</option><option value="important">Important Notice</option><option value="emergency">Emergency Notice</option><option value="promotion">Promotion</option></select></div><div class="field"><label for="noticeStateInput">Visibility</label><select id="noticeStateInput"><option value="published">Publish immediately</option><option value="draft">Save as draft</option></select></div></div><button class="btn btn-blue" type="submit">Publish Announcement</button><p id="noticeStatus" class="status" aria-live="polite"></p></form><hr><h3>Manage Announcements</h3><div id="noticeAdminList" class="admin-list"></div></div>
+
+<div class="admin-pane" id="feedbackPane"><h3>Customer Reviews &amp; Questions</h3><p class="muted small">Read feedback, reply publicly, hide or delete content.</p><div class="field"><label for="feedbackFilter">Filter messages</label><select id="feedbackFilter"><option value="all">All reviews and questions</option><option value="review">Reviews only</option><option value="question">Questions only</option><option value="hidden">Hidden items</option></select></div><div id="feedbackAdminList" class="admin-list"></div></div>
+
+<div class="admin-pane" id="backupPane"><h3>Backup &amp; Restore</h3><p class="muted small">Export designs, media, notices and customer feedback. Keep backup files somewhere safe.</p><button id="exportBtn" class="btn btn-blue" type="button">↓ Export Full Backup</button><hr><div class="field"><label for="importFile">Select a backup (.json)</label><input id="importFile" type="file" accept=".json,application/json"></div><button id="importBtn" class="btn btn-light" type="button">Import &amp; Restore Backup</button><p id="backupStatus" class="status" aria-live="polite"></p><div class="admin-note">Importing replaces the current local records. Export your current data first. Backups containing videos can be large.</div></div>
+<hr><button class="btn btn-light" id="ownerLogout" type="button">🔒 Lock Owner Dashboard</button>
+</div></div>
+
+<script>
+"use strict";
+
+/* C.N.S FASHION — single-file frontend.
+   Local IndexedDB only; not a shared online database.
+   The PIN below is a demo barrier, not secure authentication. */
+
+const WHATSAPP_NUMBER="233257630640";
+const OWNER_PIN="A1O1";
+const DB_NAME="CNSFashionDatabase";
+const DB_VERSION=2;
+const DESIGN_STORE="designs",NOTICE_STORE="announcements",INTERACTION_STORE="interactions";
+const MAX_IMAGE_BYTES=5*1024*1024,MAX_VIDEO_BYTES=20*1024*1024,MAX_MEDIA_PER_DESIGN=12;
+
+const seedDesigns=[
+{id:"seed-1",name:"Ankara Flare Dress",category:"Ankara",price:250,type:"both",availability:"available",description:"A colourful Ankara-inspired dress with a fitted waist and flowing skirt. Contact us to discuss fabric and fit.",image:"https://images.unsplash.com/photo-1585247226801-bc613c441316?auto=format&fit=crop&w=800&q=85"},
+{id:"seed-2",name:"Elegant Evening Dress",category:"Evening & Party",price:350,type:"custom",availability:"made-to-order",description:"An elegant occasion look. Ask us about fabric, fit and custom finishing.",image:"https://images.unsplash.com/photo-1566174053879-31528523f8ae?auto=format&fit=crop&w=800&q=85"},
+{id:"seed-3",name:"Modern Casual Dress",category:"Casual Dresses",price:180,type:"ready",availability:"available",description:"A versatile everyday style for outings and relaxed occasions.",image:"https://images.unsplash.com/photo-1515372039744-b8f02a3ae446?auto=format&fit=crop&w=800&q=85"},
+{id:"seed-4",name:"Classic Black Dress",category:"Evening & Party",price:220,type:"both",availability:"available",description:"A timeless black outfit with a clean, elegant silhouette.",image:"https://images.unsplash.com/photo-1539008835657-9e8e9680c956?auto=format&fit=crop&w=800&q=85"},
+{id:"seed-5",name:"Floral Summer Dress",category:"Casual Dresses",price:160,type:"ready",availability:"available",description:"A light, feminine style for sunny days and casual outings.",image:"https://images.unsplash.com/photo-1496747611176-843222e1e57c?auto=format&fit=crop&w=800&q=85"},
+{id:"seed-6",name:"Contemporary African Look",category:"African Wear",price:280,type:"custom",availability:"made-to-order",description:"A modern look inspired by African fashion. Ask about fabric and measurements.",image:"https://images.unsplash.com/photo-1539109136881-3be0616acf4b?auto=format&fit=crop&w=800&q=85"},
+{id:"seed-7",name:"Elegant Two-Piece",category:"Two-Piece Sets",price:300,type:"both",availability:"available",description:"A coordinated outfit idea that can be adapted to your measurements.",image:"https://images.unsplash.com/photo-1483985988355-763728e1935b?auto=format&fit=crop&w=800&q=85"},
+{id:"seed-8",name:"Modern Office Style",category:"Office Wear",price:200,type:"custom",availability:"made-to-order",description:"A polished style idea for work and smart daytime occasions.",image:"https://images.unsplash.com/photo-1485230895905-ec40ba36b9bc?auto=format&fit=crop&w=800&q=85"},
+{id:"seed-9",name:"Statement Gown",category:"Gowns",price:400,type:"custom",availability:"made-to-order",description:"A striking gown inspiration for special events and celebrations.",image:"https://images.unsplash.com/photo-1469334031218-e382a71b716b?auto=format&fit=crop&w=800&q=85"},
+{id:"seed-10",name:"Stylish Skirt & Blouse",category:"Skirts & Blouses",price:230,type:"both",availability:"available",description:"A coordinated separates look that can be adapted to your taste.",image:"https://images.unsplash.com/photo-1509631179647-0177331693ae?auto=format&fit=crop&w=800&q=85"},
+{id:"seed-11",name:"Modern Jumpsuit",category:"Jumpsuits",price:270,type:"custom",availability:"made-to-order",description:"A modern one-piece outfit for a confident, contemporary look.",image:"https://images.unsplash.com/photo-1503342217505-b0a15ec3261c?auto=format&fit=crop&w=800&q=85"},
+{id:"seed-12",name:"Special Occasion Style",category:"Kente Inspired",price:320,type:"custom",availability:"made-to-order",description:"A special-occasion style concept. Ask about suitable fabrics and finishing.",image:"https://images.unsplash.com/photo-1525507119028-ed4c629a60a3?auto=format&fit=crop&w=800&q=85"}
+].map(d=>({...d,media:[],coverIndex:0,hidden:false}));
+
+let db=null,designs=[],announcements=[],interactions=[];
+let activeCategory="All",selectedDesignId=null,selectedMediaIndex=0,editingId=null;
+let ownerUnlocked=false,pinAttempts=0,lockUntil=0,selectedRating=5,toastTimer=null;
+let pendingRemovedMedia=new Set(),pendingNewMedia=[],pendingCoverSrc=null;
+
+const $=id=>document.getElementById(id);
+const uid=prefix=>prefix+"-"+Date.now().toString(36)+"-"+Math.random().toString(36).slice(2,9);
+const escapeHTML=value=>String(value??"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+function safeUrl(value){
+ const s=String(value||"").trim();
+ if(/^https?:\/\//i.test(s))return s;
+ if(/^data:image\/(?:jpeg|png|webp|gif|avif);base64,/i.test(s))return s;
+ if(/^data:video\/(?:mp4|webm|ogg);base64,/i.test(s))return s;
+ return "";
+}
+function money(value){const n=Number(value);return "GH₵ "+(Number.isFinite(n)?n.toLocaleString("en-GH",{minimumFractionDigits:2,maximumFractionDigits:2}):"0.00")}
+function dateLabel(value){try{return new Date(value).toLocaleDateString("en-GH",{day:"numeric",month:"short",year:"numeric"})}catch{return ""}}
+function timeLabel(value){try{return new Date(value).toLocaleString("en-GH")}catch{return ""}}
+function whatsappLink(message){return "https://wa.me/"+WHATSAPP_NUMBER+"?text="+encodeURIComponent(message)}
+function typeLabel(type){return ({ready:"Ready-made",custom:"Custom-made",both:"Ready-made and custom-made"})[type]||"Ready-made and custom-made"}
+function availabilityLabel(status){return ({available:"Available","made-to-order":"Made to order","sold-out":"Sold out",unavailable:"Currently unavailable"})[status]||"Available"}
+function availabilityClass(status){return status==="sold-out"||status==="unavailable"?"red-pill":status==="made-to-order"?"gold-pill":"green-pill"}
+function kindLabel(kind){return ({update:"Business Update",important:"Important Notice",emergency:"Emergency Notice",promotion:"Promotion"})[kind]||"Business Update"}
+function toast(message){const el=$("toast");el.textContent=message;el.classList.add("show");clearTimeout(toastTimer);toastTimer=setTimeout(()=>el.classList.remove("show"),3200)}
+function setStatus(id,message,type=""){const el=$(id);if(el){el.textContent=message;el.className="status"+(type?" "+type:"")}}
+function openModal(id){$(id).classList.add("show");document.body.style.overflow="hidden"}
+function closeModal(id){$(id).classList.remove("show");if(!document.querySelector(".modal.show"))document.body.style.overflow=""}
+function setOwnerTab(id){document.querySelectorAll(".admin-tab").forEach(b=>b.classList.toggle("active",b.dataset.tab===id));document.querySelectorAll(".admin-pane").forEach(p=>p.classList.toggle("active",p.id===id))}
+function inquiryMessage(d){return "Hello C.N.S FASHION! I am interested in \""+d.name+"\".\nCategory: "+d.category+"\nPrice: "+money(d.price)+"\nAvailability: "+availabilityLabel(d.availability)+"\nClothing type: "+typeLabel(d.type)+"\nPlease tell me more about this design."}
+function mediaList(d){
+ if(!d)return [];
+ const arr=Array.isArray(d.media)?d.media:[];
+ const usable=arr.filter(m=>m&&safeUrl(m.src)).map(m=>({type:m.type||(/^data:video\//i.test(m.src)?"video":"image"),src:safeUrl(m.src),name:m.name||""}));
+ if(usable.length)return usable;
+ return d.image&&safeUrl(d.image)?[{type:"image",src:safeUrl(d.image),name:"Cover image"}]:[];
+}
+function coverIndex(d){const arr=mediaList(d);if(!arr.length)return 0;const i=Number(d.coverIndex||0);return Math.max(0,Math.min(i,arr.length-1))}
+function cardMedia(d){const arr=mediaList(d);return arr[coverIndex(d)]||arr[0]||{type:"image",src:""}}
+
+/* IndexedDB */
+function openDB(){
+ return new Promise((resolve,reject)=>{
+  if(!("indexedDB" in window)){reject(new Error("IndexedDB is not available in this browser."));return}
+  const req=indexedDB.open(DB_NAME,DB_VERSION);
+  req.onupgradeneeded=()=>{const database=req.result;[DESIGN_STORE,NOTICE_STORE,INTERACTION_STORE].forEach(name=>{if(!database.objectStoreNames.contains(name))database.createObjectStore(name,{keyPath:"id"})})};
+  req.onsuccess=()=>resolve(req.result);
+  req.onerror=()=>reject(req.error||new Error("Could not open local storage."));
+ });
+}
+function allRecords(store){return new Promise((resolve,reject)=>{const tx=db.transaction(store,"readonly"),req=tx.objectStore(store).getAll();req.onsuccess=()=>resolve(req.result||[]);req.onerror=()=>reject(req.error||new Error("Could not read records."))})}
+function putRecord(store,record){return new Promise((resolve,reject)=>{const tx=db.transaction(store,"readwrite");tx.objectStore(store).put(record);tx.oncomplete=()=>resolve();tx.onerror=()=>reject(tx.error||new Error("Could not save record."));tx.onabort=()=>reject(tx.error||new Error("Save was cancelled."))})}
+function deleteRecord(store,id){return new Promise((resolve,reject)=>{const tx=db.transaction(store,"readwrite");tx.objectStore(store).delete(id);tx.oncomplete=()=>resolve();tx.onerror=()=>reject(tx.error||new Error("Could not delete record."))})}
+function clearStore(store){return new Promise((resolve,reject)=>{const tx=db.transaction(store,"readwrite");tx.objectStore(store).clear();tx.oncomplete=()=>resolve();tx.onerror=()=>reject(tx.error||new Error("Could not clear records."))})}
+async function loadAll(){
+ const [rawD,rawN,rawI]=await Promise.all([allRecords(DESIGN_STORE),allRecords(NOTICE_STORE),allRecords(INTERACTION_STORE)]);
+ if(!rawD.length){for(const d of seedDesigns)await putRecord(DESIGN_STORE,{...d,createdAt:new Date().toISOString()})}
+ designs=(await allRecords(DESIGN_STORE)).map(d=>({...d,media:Array.isArray(d.media)?d.media:[],price:Number(d.price)||0,type:d.type||"both",availability:d.availability||"available",hidden:!!d.hidden}));
+ announcements=rawN;interactions=rawI;renderAll();
+}
+
+/* Gallery and notices */
+function renderCategories(){
+ const cats=["All",...new Set(designs.filter(d=>!d.hidden).map(d=>d.category).filter(Boolean))];
+ if(!cats.includes(activeCategory))activeCategory="All";
+ $("categories").innerHTML=cats.map(c=>`<button type="button" class="chip ${c===activeCategory?"active":""}" data-category="${escapeHTML(c)}">${escapeHTML(c)}</button>`).join("");
+}
+function ratingStats(id){const list=interactions.filter(x=>x.designId===id&&x.kind==="review"&&!x.hidden);return {count:list.length,average:list.length?list.reduce((s,x)=>s+Number(x.rating||0),0)/list.length:0}}
+function starText(r){r=Math.max(0,Math.min(5,Math.round(Number(r)||0)));return "★".repeat(r)+"☆".repeat(5-r)}
+function imageFallback(img){img.onerror=null;img.src="https://placehold.co/600x800/eaf0fb/123580?text=CNS+FASHION"}
+function renderGallery(){
+ renderCategories();
+ const term=$("searchInput").value.trim().toLowerCase();
+ const list=designs.filter(d=>!d.hidden&&(activeCategory==="All"||d.category===activeCategory)&&[d.name,d.category,d.description,typeLabel(d.type),availabilityLabel(d.availability)].join(" ").toLowerCase().includes(term));
+ $("designCount").textContent=designs.filter(d=>!d.hidden).length+" designs";
+ if(!list.length){$("gallery").innerHTML='<div class="empty"><strong>No matching designs</strong><p>Try another search or category.</p><button class="btn btn-blue" id="resetSearch" type="button">Show All Designs</button></div>';return}
+ $("gallery").innerHTML=list.map(d=>{
+  const m=cardMedia(d),stats=ratingStats(d.id),count=mediaList(d).length;
+  const media=m.type==="video"?`<video src="${escapeHTML(m.src)}" muted playsinline preload="metadata" controls aria-label="${escapeHTML(d.name)} video"></video>`:`<img src="${escapeHTML(m.src)}" alt="${escapeHTML(d.name)}" loading="lazy" onerror="imageFallback(this)">`;
+  return `<article class="product"><div class="product-cover" data-view="${escapeHTML(d.id)}" role="button" tabindex="0" aria-label="View ${escapeHTML(d.name)}">${media}<span class="product-badge">${escapeHTML(d.category)}</span>${count>1?`<span class="media-count">▧ ${count} media</span>`:""}</div><div class="product-body"><div class="product-meta"><span class="tag">${escapeHTML(typeLabel(d.type))}</span><span class="pill ${availabilityClass(d.availability)}">${escapeHTML(availabilityLabel(d.availability))}</span></div><h3>${escapeHTML(d.name)}</h3><p class="product-desc">${escapeHTML(d.description||"Contact us to learn more about this design.")}</p><div class="price">${money(d.price)}</div><div class="review-summary"><span class="stars">${stats.count?starText(stats.average):"☆☆☆☆☆"}</span><span>${stats.count?stats.average.toFixed(1)+" · "+stats.count+" review"+(stats.count===1?"":"s"):"No reviews yet"}</span></div><div class="product-actions"><button type="button" class="btn btn-light" data-view="${escapeHTML(d.id)}">View Design</button><a class="btn btn-blue" href="${escapeHTML(whatsappLink(inquiryMessage(d)))}" target="_blank" rel="noopener noreferrer">Enquire ↗</a></div></div></article>`;
+ }).join("");
+}
+function renderAnnouncement(){
+ const a=announcements.filter(x=>x.state==="published").sort((x,y)=>new Date(y.updatedAt||y.createdAt)-new Date(x.updatedAt||x.createdAt))[0];
+ if(!a){$("announcementStrip").classList.add("hidden");return}
+ $("announcementStrip").classList.remove("hidden");$("announcementTitle").textContent=a.title;$("announcementText").textContent=a.body;$("announcementKind").textContent=kindLabel(a.kind);$("announcementSymbol").textContent=a.kind==="emergency"?"⚠":a.kind==="promotion"?"★":"✦";
+ $("announcementStrip").style.background=a.kind==="emergency"?"#fff0f0":"";$("announcementSymbol").style.color=a.kind==="emergency"?"#a31e2a":"";
+}
+function renderAll(){renderGallery();renderAdminList();renderNoticeAdminList();renderFeedbackAdminList();renderAnnouncement();renderStats()}
+
+/* Details, media, reviews and questions */
+function showDesign(id){if(!designs.some(d=>d.id===id&&!d.hidden))return;selectedDesignId=id;selectedRating=5;selectedMediaIndex=coverIndex(designs.find(d=>d.id===id));renderDetail();openModal("detailModal")}
+function renderReviewCards(id,kind){
+ const list=interactions.filter(x=>x.designId===id&&x.kind===kind&&!x.hidden).sort((a,b)=>new Date(b.createdAt)-new Date(a.createdAt));
+ if(!list.length)return `<div class="notice-empty">${kind==="review"?"No reviews yet. Be the first to share your experience!":"No questions yet. Ask the first question about this design."}</div>`;
+ return list.map(x=>`<article class="review-card"><div class="review-top"><div><div class="review-name">${escapeHTML(x.anonymous||!x.name?"Anonymous customer":x.name)}</div><div class="review-date">${escapeHTML(dateLabel(x.createdAt))}</div></div>${kind==="review"?`<span class="stars">${starText(x.rating)}</span>`:'<span class="qa-label">Customer question</span>'}</div><div class="review-body">${escapeHTML(x.body)}</div>${x.reply?`<div class="owner-reply"><strong>✦ C.N.S FASHION · Owner reply</strong><div style="white-space:pre-wrap">${escapeHTML(x.reply)}</div></div>`:""}</article>`).join("");
+}
+function renderDetail(){
+ const d=designs.find(x=>x.id===selectedDesignId);if(!d)return;
+ const media=mediaList(d);if(selectedMediaIndex>=media.length)selectedMediaIndex=0;
+ const m=media[selectedMediaIndex],stats=ratingStats(d.id);
+ const main=m?(m.type==="video"?`<video id="detailMainMedia" class="detail-main video" src="${escapeHTML(m.src)}" controls playsinline preload="metadata"></video>`:`<img id="detailMainMedia" class="detail-main" src="${escapeHTML(m.src)}" alt="${escapeHTML(d.name)}" onerror="imageFallback(this)">`):'<div class="detail-main" style="display:grid;place-items:center">No media available</div>';
+ $("detailContent").innerHTML=`<div class="detail-grid"><div class="detail-media">${main}<div class="media-thumbs">${media.map((x,i)=>`<button type="button" class="media-thumb ${i===selectedMediaIndex?"active":""}" data-media-index="${i}" aria-label="Show media ${i+1}">${x.type==="video"?`<video src="${escapeHTML(x.src)}" muted preload="metadata"></video>`:`<img src="${escapeHTML(x.src)}" alt="" onerror="imageFallback(this)">`}</button>`).join("")}</div></div><div class="detail-copy"><div class="eyebrow">C.N.S FASHION · Collection</div><h2>${escapeHTML(d.name)}</h2><div class="product-meta"><span class="tag">${escapeHTML(d.category)}</span><span class="pill ${availabilityClass(d.availability)}">${escapeHTML(availabilityLabel(d.availability))}</span></div><div class="price">${money(d.price)}</div><div class="review-summary"><span class="stars">${stats.count?starText(stats.average):"☆☆☆☆☆"}</span><strong>${stats.count?stats.average.toFixed(1):"No ratings"}</strong><span>${stats.count?"("+stats.count+" reviews)":""}</span></div><p>${escapeHTML(d.description||"Contact us to discuss this design.")}</p><p><strong>Category:</strong> ${escapeHTML(d.category)}<br><strong>Clothing:</strong> ${escapeHTML(typeLabel(d.type))}<br><strong>Availability:</strong> ${escapeHTML(availabilityLabel(d.availability))}</p><div class="detail-actions"><a class="btn btn-blue btn-block" href="${escapeHTML(whatsappLink(inquiryMessage(d)))}" target="_blank" rel="noopener noreferrer">Ask About This Design on WhatsApp ↗</a><button type="button" class="btn btn-light" id="detailShare">Share / Save Picture</button></div></div></div>
+<section class="reviews-section" style="padding:0"><div class="reviews-head"><div><h3>Customer Reviews</h3><p class="muted small">Share your experience with this design.</p></div><div><div class="rating-big">${stats.count?stats.average.toFixed(1):"—"}</div><div class="stars">${stats.count?starText(stats.average):"☆☆☆☆☆"}</div><div class="small muted">${stats.count} reviews</div></div></div>
+<form id="reviewForm" class="review-form"><h4>Write a review</h4><div class="field"><label>Your rating *</label><div class="star-picker" id="starPicker">${[1,2,3,4,5].map(n=>`<button type="button" class="star-choice ${n<=selectedRating?"active":""}" data-rating="${n}" aria-label="${n} stars">★</button>`).join("")}</div></div><div class="field"><label for="reviewName">Your name (optional)</label><input id="reviewName" maxlength="60" placeholder="Your name or anonymous"></div><div class="field"><label for="reviewBody">Your review *</label><textarea id="reviewBody" required maxlength="1200" placeholder="What did you like about this design?"></textarea></div><button class="btn btn-blue" type="submit">Post Review</button><p class="muted small">Reviews are saved locally on this device in this version.</p></form><div id="reviewList" class="review-list">${renderReviewCards(d.id,"review")}</div></section>
+<section class="reviews-section" style="padding:0"><div class="reviews-head"><div><h3>Questions &amp; Answers</h3><p class="muted small">Ask about fabric, fit, availability or custom options.</p></div><span class="pill">${interactions.filter(x=>x.designId===d.id&&x.kind==="question"&&!x.hidden).length} questions</span></div><form id="questionForm" class="review-form"><h4>Ask a question</h4><div class="field"><label for="questionName">Your name (optional)</label><input id="questionName" maxlength="60" placeholder="Your name or anonymous"></div><div class="field"><label for="questionBody">Your question *</label><textarea id="questionBody" required maxlength="1200" placeholder="Can this design be made in another colour?"></textarea></div><button class="btn btn-blue" type="submit">Post Question</button></form><div id="questionList" class="review-list">${renderReviewCards(d.id,"question")}</div></section>`;
+}
+async function submitInteraction(event,kind){
+ event.preventDefault();if(!db||!selectedDesignId)return;
+ const body=$(kind==="review"?"reviewBody":"questionBody").value.trim(),name=$(kind==="review"?"reviewName":"questionName").value.trim();
+ if(!body){toast("Please enter your message.");return}
+ try{await putRecord(INTERACTION_STORE,{id:uid(kind),designId:selectedDesignId,kind,name:name.slice(0,60),anonymous:!name,body:body.slice(0,1200),rating:kind==="review"?selectedRating:null,reply:"",hidden:false,createdAt:new Date().toISOString()});interactions=await allRecords(INTERACTION_STORE);renderDetail();renderGallery();renderFeedbackAdminList();renderStats();toast(kind==="review"?"Review posted on this device.":"Question posted on this device.")}
+ catch(e){toast("Could not save. Browser storage may be full.")}
+}
+async function shareCurrentDesign(){
+ const d=designs.find(x=>x.id===selectedDesignId),m=mediaList(d)[selectedMediaIndex];if(!d||!m){toast("No media is available.");return}
+ if(m.type==="video"){window.open(m.src,"_blank","noopener,noreferrer");return}
+ try{
+  const response=await fetch(m.src);if(!response.ok)throw new Error("Image unavailable");
+  const blob=await response.blob(),file=new File([blob],d.name.replace(/[^a-z0-9_-]/gi,"-")+".jpg",{type:blob.type||"image/jpeg"});
+  if(navigator.share&&navigator.canShare&&navigator.canShare({files:[file]}))await navigator.share({title:d.name,text:"C.N.S FASHION: "+d.name,files:[file]});
+  else{const url=URL.createObjectURL(blob),a=document.createElement("a");a.href=url;a.download=file.name;a.click();setTimeout(()=>URL.revokeObjectURL(url),2000);toast("Picture download started.")}
+ }catch(e){toast("Automatic sharing is unavailable for this image. Try opening the picture and saving it.")}
+}
+
+/* Owner design management */
+function renderAdminList(){
+ const el=$("adminList");if(!el)return;
+ if(!designs.length){el.innerHTML='<div class="notice-empty">No designs yet.</div>';return}
+ el.innerHTML=[...designs].sort((a,b)=>new Date(b.createdAt||0)-new Date(a.createdAt||0)).map(d=>{
+ const m=cardMedia(d);
+ return `<div class="admin-item">${m.src?`<img src="${escapeHTML(m.src)}" alt="" loading="lazy" onerror="imageFallback(this)">`:'<div class="admin-thumb"></div>'}<div class="grow"><strong>${escapeHTML(d.name)}</strong><span class="muted">${escapeHTML(d.category)} · ${money(d.price)}</span><br><span class="muted">${mediaList(d).length} media · ${escapeHTML(availabilityLabel(d.availability))}${d.hidden?" · Hidden":""}</span></div><div class="admin-actions"><button type="button" class="btn btn-light" data-edit="${escapeHTML(d.id)}">Edit</button><button type="button" class="btn btn-light" data-toggle-hidden="${escapeHTML(d.id)}">${d.hidden?"Publish":"Hide"}</button><button type="button" class="btn btn-danger" data-delete-design="${escapeHTML(d.id)}">Delete</button></div></div>`;
+ }).join("");
+}
+function resetDesignForm(){
+ editingId=null;pendingRemovedMedia.clear();pendingNewMedia=[];pendingCoverSrc=null;$("designForm").reset();$("formHeading").textContent="Add a Fashion Design";$("saveDesignBtn").textContent="＋ Add Design";$("cancelEdit").classList.add("hidden");$("existingMediaArea").classList.add("hidden");$("mediaPreviewGrid").innerHTML="";$("designCover").innerHTML='<option value="0">First picture</option>';setStatus("adminStatus","");
+}
+function startEditDesign(id){
+ if(!ownerUnlocked)return;const d=designs.find(x=>x.id===id);if(!d)return;
+ editingId=id;pendingRemovedMedia.clear();pendingNewMedia=[];pendingCoverSrc=cardMedia(d).src;
+ $("designName").value=d.name||"";$("designCategory").value=d.category||"African Wear";$("designPrice").value=d.price??"";$("designType").value=d.type||"both";$("designAvailability").value=d.availability||"available";$("designDescription").value=d.description||"";$("designImageUrl").value="";$("designMedia").value="";
+ $("formHeading").textContent="Edit Fashion Design";$("saveDesignBtn").textContent="Save Changes";$("cancelEdit").classList.remove("hidden");renderMediaEditor();$("designForm").scrollIntoView({behavior:"smooth",block:"start"});
+}
+function renderMediaEditor(){
+ const d=designs.find(x=>x.id===editingId);if(!d){$("existingMediaArea").classList.add("hidden");return}
+ const original=mediaList(d).filter((m,i)=>!pendingRemovedMedia.has(i));
+ const combined=[...original,...pendingNewMedia];
+ $("existingMediaArea").classList.remove("hidden");
+ $("mediaPreviewGrid").innerHTML=mediaList(d).map((m,i)=>pendingRemovedMedia.has(i)?"":`<div class="media-preview">${m.type==="video"?`<video src="${escapeHTML(m.src)}" muted controls preload="metadata"></video>`:`<img src="${escapeHTML(m.src)}" alt="Design media" onerror="imageFallback(this)">`}<button type="button" data-remove-media="${i}" aria-label="Remove media">×</button><button type="button" class="cover-btn" data-cover-src="${escapeHTML(m.src)}">${pendingCoverSrc===m.src?"✓ Cover":"Make cover"}</button></div>`).join("")+pendingNewMedia.map((m,i)=>`<div class="media-preview">${m.type==="video"?`<video src="${escapeHTML(m.src)}" muted controls></video>`:`<img src="${escapeHTML(m.src)}" alt="">`}<button type="button" data-remove-new-media="${i}" aria-label="Remove new media">×</button><button type="button" class="cover-btn" data-cover-src="${escapeHTML(m.src)}">${pendingCoverSrc===m.src?"✓ Cover":"Make cover"}</button></div>`).join("");
+ $("designCover").innerHTML=combined.map((m,i)=>`<option value="${i}" ${m.src===pendingCoverSrc?"selected":""}>${m.type==="video"?"Video":"Picture"} ${i+1}</option>`).join("")||'<option value="0">First picture</option>';
+}
+function readFileData(file){return new Promise((resolve,reject)=>{const r=new FileReader();r.onload=()=>resolve(r.result);r.onerror=()=>reject(new Error("Could not read "+file.name));r.readAsDataURL(file)})}
+async function filesToMedia(files){
+ const result=[];
+ for(const file of files){
+  if(file.type.startsWith("image/")){if(file.size>MAX_IMAGE_BYTES)throw new Error(file.name+" exceeds the 5 MB image limit.");}
+  else if(["video/mp4","video/webm","video/ogg"].includes(file.type)){if(file.size>MAX_VIDEO_BYTES)throw new Error(file.name+" exceeds the 20 MB video limit.");}
+  else throw new Error(file.name+" is not a supported picture or video.");
+  result.push({type:file.type.startsWith("video/")?"video":"image",src:await readFileData(file),name:file.name});
+ }
+ return result;
+}
+async function saveDesign(event){
+ event.preventDefault();if(!ownerUnlocked||!db)return;
+ const name=$("designName").value.trim(),category=$("designCategory").value,price=Number($("designPrice").value),type=$("designType").value,availability=$("designAvailability").value,description=$("designDescription").value.trim(),files=Array.from($("designMedia").files||[]),imageUrl=$("designImageUrl").value.trim(),existing=designs.find(d=>d.id===editingId);
+ if(!name||!category){setStatus("adminStatus","Enter the design name and category.","error");return}
+ if(!Number.isFinite(price)||price<=0){setStatus("adminStatus","Enter a price greater than zero.","error");return}
+ if(imageUrl&&!/^https?:\/\//i.test(imageUrl)){setStatus("adminStatus","Picture URLs must start with http:// or https://.","error");return}
+ const old=existing?mediaList(existing).filter((m,i)=>!pendingRemovedMedia.has(i)):[];
+ if(old.length+pendingNewMedia.length+files.length+(imageUrl&&!old.some(m=>m.src===imageUrl)&&!pendingNewMedia.some(m=>m.src===imageUrl)?1:0)>MAX_MEDIA_PER_DESIGN){setStatus("adminStatus","A design can contain up to "+MAX_MEDIA_PER_DESIGN+" media files.","error");return}
+ if(!existing&&!files.length&&!imageUrl){setStatus("adminStatus","Upload at least one picture or provide a picture URL.","error");return}
+ const btn=$("saveDesignBtn");btn.disabled=true;setStatus("adminStatus","Preparing media and saving…");
+ try{
+  /* Files are read only once at submit time to prevent duplicate uploads. */
+  const newMedia=await filesToMedia(files);
+  let media=[...old,...pendingNewMedia,...newMedia];
+  if(imageUrl&&!media.some(m=>m.src===imageUrl))media.push({type:"image",src:imageUrl,name:"External image"});
+  if(!media.length)throw new Error("Keep or add at least one picture or video.");
+  if(media.length>MAX_MEDIA_PER_DESIGN)throw new Error("Maximum 12 media files per design.");
+  let cover=media.findIndex(m=>m.src===pendingCoverSrc);
+  if(cover<0&&existing){const oldCover=cardMedia(existing);cover=media.findIndex(m=>m.src===oldCover.src)}
+  if(cover<0&&imageUrl)cover=media.findIndex(m=>m.src===imageUrl);
+  if(cover<0)cover=0;
+  const record={...(existing||{}),id:editingId||uid("design"),name,category,price,type,availability,description,media,coverIndex:cover,image:media[cover].src,hidden:existing?!!existing.hidden:false,createdAt:existing?.createdAt||new Date().toISOString(),updatedAt:new Date().toISOString()};
+  await putRecord(DESIGN_STORE,record);designs=await allRecords(DESIGN_STORE);renderAll();resetDesignForm();setStatus("adminStatus","Design saved in this browser.","success");toast("Design saved.");
+ }catch(e){console.error(e);setStatus("adminStatus",e.message||"Could not save. Try smaller files or free browser storage.","error")}
+ finally{btn.disabled=false}
+}
+async function removeDesign(id){
+ const d=designs.find(x=>x.id===id);if(!d||!ownerUnlocked)return;
+ if(!confirm('Delete "'+d.name+'" and its associated reviews and questions?'))return;
+ try{await deleteRecord(DESIGN_STORE,id);for(const x of interactions.filter(x=>x.designId===id))await deleteRecord(INTERACTION_STORE,x.id);designs=await allRecords(DESIGN_STORE);interactions=await allRecords(INTERACTION_STORE);renderAll();if(selectedDesignId===id)closeModal("detailModal");toast("Design deleted.")}
+ catch(e){toast("Could not delete this design.")}
+}
+
+/* Announcements */
+async function saveAnnouncement(event){
+ event.preventDefault();if(!ownerUnlocked)return;
+ const title=$("noticeTitleInput").value.trim(),body=$("noticeBodyInput").value.trim();
+ if(!title||!body){setStatus("noticeStatus","Enter a heading and message.","error");return}
+ const notice={id:uid("notice"),title:title.slice(0,100),body:body.slice(0,2000),kind:$("noticeKindInput").value,state:$("noticeStateInput").value,createdAt:new Date().toISOString(),updatedAt:new Date().toISOString()};
+ try{await putRecord(NOTICE_STORE,notice);announcements=await allRecords(NOTICE_STORE);$("noticeForm").reset();renderAll();setStatus("noticeStatus",notice.state==="published"?"Announcement published on this device.":"Draft saved.","success");toast("Announcement saved.")}
+ catch(e){setStatus("noticeStatus","Could not save announcement.","error")}
+}
+function renderNoticeAdminList(){
+ const el=$("noticeAdminList");if(!el)return;
+ const list=[...announcements].sort((a,b)=>new Date(b.updatedAt||b.createdAt)-new Date(a.updatedAt||a.createdAt));
+ if(!list.length){el.innerHTML='<div class="notice-empty">No announcements yet.</div>';return}
+ el.innerHTML=list.map(a=>`<article class="announcement-admin"><div style="display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap"><span class="pill ${a.kind==="emergency"?"red-pill":"gold-pill"}">${escapeHTML(kindLabel(a.kind))}</span><span class="pill ${a.state==="published"?"green-pill":""}">${a.state==="published"?"Published":"Draft"}</span></div><h4>${escapeHTML(a.title)}</h4><p>${escapeHTML(a.body)}</p><span class="muted small">${escapeHTML(timeLabel(a.updatedAt||a.createdAt))}</span><div class="admin-actions" style="margin-top:10px"><button class="btn btn-light" type="button" data-toggle-notice="${escapeHTML(a.id)}">${a.state==="published"?"Unpublish":"Publish"}</button><button class="btn btn-danger" type="button" data-delete-notice="${escapeHTML(a.id)}">Delete</button></div></article>`).join("");
+}
+async function toggleNotice(id){const a=announcements.find(x=>x.id===id);if(!a)return;await putRecord(NOTICE_STORE,{...a,state:a.state==="published"?"draft":"published",updatedAt:new Date().toISOString()});announcements=await allRecords(NOTICE_STORE);renderAll();toast("Announcement updated.")}
+
+/* Customer feedback moderation */
+function renderFeedbackAdminList(){
+ const el=$("feedbackAdminList");if(!el)return;
+ const filter=$("feedbackFilter")?.value||"all";let list=[...interactions].sort((a,b)=>new Date(b.createdAt)-new Date(a.createdAt));
+ if(filter==="review")list=list.filter(x=>x.kind==="review"&&!x.hidden);
+ if(filter==="question")list=list.filter(x=>x.kind==="question"&&!x.hidden);
+ if(filter==="hidden")list=list.filter(x=>x.hidden);
+ if(!list.length){el.innerHTML='<div class="notice-empty">No messages match this filter.</div>';return}
+ el.innerHTML=list.map(x=>{const d=designs.find(z=>z.id===x.designId);return `<article class="review-card"><div class="review-top"><div><span class="pill">${x.kind==="review"?"Review":"Question"}</span> <span class="pill ${x.hidden?"red-pill":"green-pill"}">${x.hidden?"Hidden":"Public"}</span><div class="review-name" style="margin-top:8px">${escapeHTML(x.anonymous||!x.name?"Anonymous customer":x.name)}</div><div class="review-date">${escapeHTML(timeLabel(x.createdAt))}</div></div>${x.kind==="review"?`<span class="stars">${starText(x.rating)}</span>`:""}</div><p class="small muted">Design: <strong>${escapeHTML(d?.name||"Deleted design")}</strong></p><div class="review-body">${escapeHTML(x.body)}</div><div class="field" style="margin-top:10px"><label for="reply-${escapeHTML(x.id)}">Owner reply (shown publicly)</label><textarea id="reply-${escapeHTML(x.id)}" maxlength="1200" style="min-height:70px">${escapeHTML(x.reply||"")}</textarea></div><div class="admin-actions"><button type="button" class="btn btn-blue" data-reply="${escapeHTML(x.id)}">Save Reply</button><button type="button" class="btn btn-light" data-toggle-feedback="${escapeHTML(x.id)}">${x.hidden?"Restore Public":"Hide"}</button><button type="button" class="btn btn-danger" data-delete-feedback="${escapeHTML(x.id)}">Delete</button></div></article>`}).join("");
+}
+async function saveReply(id){const x=interactions.find(z=>z.id===id);if(!x||!ownerUnlocked)return;const reply=$("reply-"+id)?.value.trim()||"";await putRecord(INTERACTION_STORE,{...x,reply:reply.slice(0,1200),updatedAt:new Date().toISOString()});interactions=await allRecords(INTERACTION_STORE);renderFeedbackAdminList();renderStats();if(selectedDesignId&&$("detailModal").classList.contains("show"))renderDetail();toast("Reply saved.")}
+async function toggleFeedback(id){const x=interactions.find(z=>z.id===id);if(!x||!ownerUnlocked)return;await putRecord(INTERACTION_STORE,{...x,hidden:!x.hidden,updatedAt:new Date().toISOString()});interactions=await allRecords(INTERACTION_STORE);renderAll();if(selectedDesignId&&$("detailModal").classList.contains("show"))renderDetail();toast("Customer message visibility updated.")}
+async function deleteFeedback(id){const x=interactions.find(z=>z.id===id);if(!x||!ownerUnlocked)return;if(!confirm("Permanently delete this customer message?"))return;await deleteRecord(INTERACTION_STORE,id);interactions=await allRecords(INTERACTION_STORE);renderAll();if(selectedDesignId&&$("detailModal").classList.contains("show"))renderDetail();toast("Message deleted.")}
+function renderStats(){$("statDesigns").textContent=designs.length;$("statInteractions").textContent=interactions.length;$("statAnnouncements").textContent=announcements.length}
+
+/* Backup and restore */
+async function exportBackup(){
+ if(!ownerUnlocked)return;const btn=$("exportBtn");btn.disabled=true;setStatus("backupStatus","Preparing backup…");
+ try{const payload={format:"CNS-FASHION-BACKUP",version:2,exportedAt:new Date().toISOString(),designs:await allRecords(DESIGN_STORE),announcements:await allRecords(NOTICE_STORE),interactions:await allRecords(INTERACTION_STORE)},blob=new Blob([JSON.stringify(payload)],{type:"application/json"}),url=URL.createObjectURL(blob),a=document.createElement("a");a.href=url;a.download="cns-fashion-backup-"+new Date().toISOString().slice(0,10)+".json";document.body.appendChild(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(url),5000);setStatus("backupStatus","Backup exported. Store it safely.","success")}
+ catch(e){setStatus("backupStatus","Could not export backup. There may not be enough memory.","error")}
+ finally{btn.disabled=false}
+}
+async function importBackup(){
+ if(!ownerUnlocked)return;const file=$("importFile").files[0];if(!file){setStatus("backupStatus","Choose a backup file first.","error");return}if(file.size>300*1024*1024){setStatus("backupStatus","Backup exceeds the 300 MB limit.","error");return}
+ try{
+  setStatus("backupStatus","Reading backup…");const parsed=JSON.parse(await file.text());
+  let ds,ns,is;
+  if(Array.isArray(parsed)){ds=parsed;ns=[];is=[]}
+  else if(parsed?.format==="CNS-FASHION-BACKUP"&&Array.isArray(parsed.designs)&&Array.isArray(parsed.announcements)&&Array.isArray(parsed.interactions)){ds=parsed.designs;ns=parsed.announcements;is=parsed.interactions}
+  else throw new Error("This is not a recognised C.N.S FASHION backup.");
+  if(!ds.every(d=>d&&d.id&&d.name&&d.category&&(Array.isArray(d.media)||typeof d.image==="string")))throw new Error("Design data is incomplete.");
+  if(!ns.every(a=>a&&a.id&&a.title&&a.body))throw new Error("Announcement data is invalid.");
+  if(!is.every(x=>x&&x.id&&x.designId&&x.body&&(x.kind==="review"||x.kind==="question")))throw new Error("Feedback data is invalid.");
+  if(!confirm("Replace all locally stored designs, notices and customer feedback with this backup? Export your current data first if needed."))return;
+  setStatus("backupStatus","Restoring backup…");await clearStore(DESIGN_STORE);await clearStore(NOTICE_STORE);await clearStore(INTERACTION_STORE);
+  for(const d of ds){const media=Array.isArray(d.media)?d.media:(d.image?[{type:"image",src:d.image}]:[]);await putRecord(DESIGN_STORE,{...d,id:String(d.id),name:String(d.name),category:String(d.category),description:String(d.description||""),price:Number(d.price)||0,type:d.type||"both",availability:d.availability||"available",media,coverIndex:Number(d.coverIndex)||0,image:d.image||media[0]?.src||"",hidden:!!d.hidden,createdAt:d.createdAt||new Date().toISOString()})}
+  for(const a of ns)await putRecord(NOTICE_STORE,a);for(const x of is)await putRecord(INTERACTION_STORE,x);
+  activeCategory="All";$("searchInput").value="";await loadAll();resetDesignForm();setStatus("backupStatus","Backup restored successfully.","success");toast("Backup restored.");
+ }catch(e){console.error(e);setStatus("backupStatus",e.message||"Could not restore backup.","error")}
+}
+
+/* Owner access: demo only */
+function requestOwnerAccess(){
+ if(Date.now()<lockUntil){toast("Please wait "+Math.ceil((lockUntil-Date.now())/1000)+" seconds.");return}
+ $("pinForm").reset();$("pinError").textContent="";openModal("pinModal");setTimeout(()=>$("ownerPin").focus(),100);
+}
+function lockOwnerArea(){ownerUnlocked=false;closeModal("adminModal");closeModal("pinModal");$("pinForm").reset();$("pinError").textContent="";resetDesignForm()}
+function unlockOwner(){ownerUnlocked=true;$("pinError").textContent="";$("pinForm").reset();closeModal("pinModal");setOwnerTab("designsPane");openModal("adminModal");renderAll()}
+$("pinForm").addEventListener("submit",event=>{event.preventDefault();if(Date.now()<lockUntil){$("pinError").textContent="Too many attempts. Please wait.";return}if($("ownerPin").value===OWNER_PIN){pinAttempts=0;unlockOwner()}else{pinAttempts++;$("ownerPin").value="";if(pinAttempts>=5){lockUntil=Date.now()+30000;pinAttempts=0;$("pinError").textContent="Too many attempts. Locked for 30 seconds."}else $("pinError").textContent="Incorrect PIN. Attempts remaining: "+(5-pinAttempts)}});
+
+/* Event handlers */
+$("year").textContent=new Date().getFullYear();
+$("adminOpen").addEventListener("click",requestOwnerAccess);
+$("ownerLogout").addEventListener("click",lockOwnerArea);
+$("menuBtn").addEventListener("click",()=>{const open=$("navlinks").classList.toggle("open");$("menuBtn").setAttribute("aria-expanded",String(open))});
+$("navlinks").addEventListener("click",e=>{if(e.target.closest("a")){$("navlinks").classList.remove("open");$("menuBtn").setAttribute("aria-expanded","false")}});
+$("searchInput").addEventListener("input",renderGallery);
+$("clearSearch").addEventListener("click",()=>{$("searchInput").value="";activeCategory="All";renderGallery()});
+$("categories").addEventListener("click",e=>{const b=e.target.closest("[data-category]");if(b){activeCategory=b.dataset.category;renderGallery()}});
+$("gallery").addEventListener("click",e=>{const v=e.target.closest("[data-view]");if(v){showDesign(v.dataset.view);return}if(e.target.id==="resetSearch"){$("searchInput").value="";activeCategory="All";renderGallery()}});
+$("gallery").addEventListener("keydown",e=>{const v=e.target.closest("[data-view]");if(v&&(e.key==="Enter"||e.key===" ")){e.preventDefault();showDesign(v.dataset.view)}});
+$("detailContent").addEventListener("click",e=>{
+ const thumb=e.target.closest("[data-media-index]");if(thumb){selectedMediaIndex=Number(thumb.dataset.mediaIndex);renderDetail();return}
+ const star=e.target.closest("[data-rating]");if(star){selectedRating=Number(star.dataset.rating);$("starPicker").querySelectorAll("[data-rating]").forEach(b=>b.classList.toggle("active",Number(b.dataset.rating)<=selectedRating));return}
+ if(e.target.closest("#detailShare"))shareCurrentDesign();
+});
+$("detailContent").addEventListener("submit",e=>{if(e.target.id==="reviewForm")submitInteraction(e,"review");if(e.target.id==="questionForm")submitInteraction(e,"question")});
+$("designForm").addEventListener("submit",saveDesign);
+$("cancelEdit").addEventListener("click",resetDesignForm);
+$("designMedia").addEventListener("change",async()=>{
+ const files=Array.from($("designMedia").files||[]);if(!files.length)return;
+ try{
+  const existing=designs.find(d=>d.id===editingId),remaining=editingId?mediaList(existing).length-pendingRemovedMedia.size+pendingNewMedia.length:0;
+  if(remaining+files.length>MAX_MEDIA_PER_DESIGN)throw new Error("A design can contain up to 12 media files.");
+  /* In edit mode, read files once and preview them. The input is not read again on save. */
+  if(editingId){const added=await filesToMedia(files);pendingNewMedia.push(...added);$("designMedia").value="";renderMediaEditor();toast("Media added to the edit form. Save changes to keep it.")}
+  else{for(const f of files){if(f.type.startsWith("image/")&&f.size>MAX_IMAGE_BYTES)throw new Error(f.name+" exceeds 5 MB.");if(f.type.startsWith("video/")&&f.size>MAX_VIDEO_BYTES)throw new Error(f.name+" exceeds 20 MB.");if(!f.type.startsWith("image/")&&!["video/mp4","video/webm","video/ogg"].includes(f.type))throw new Error(f.name+" is not a supported media format.")}}
+ }catch(e){toast(e.message);$("designMedia").value=""}
+});
+$("mediaPreviewGrid").addEventListener("click",e=>{
+ const rm=e.target.closest("[data-remove-media]"),rmNew=e.target.closest("[data-remove-new-media]"),cover=e.target.closest("[data-cover-src]");
+ if(rm){const i=Number(rm.dataset.removeMedia);if(confirm("Remove this media when saving?")){pendingRemovedMedia.add(i);if(pendingCoverSrc===mediaList(designs.find(d=>d.id===editingId))[i]?.src)pendingCoverSrc=null;renderMediaEditor()}}
+ if(rmNew){pendingNewMedia.splice(Number(rmNew.dataset.removeNewMedia),1);renderMediaEditor()}
+ if(cover){pendingCoverSrc=cover.dataset.coverSrc;renderMediaEditor()}
+});
+$("designCover").addEventListener("change",()=>{const d=designs.find(x=>x.id===editingId);if(!d)return;const idx=Number($("designCover").value),arr=[...mediaList(d).filter((m,i)=>!pendingRemovedMedia.has(i)),...pendingNewMedia];pendingCoverSrc=arr[idx]?.src||null;renderMediaEditor()});
+$("adminList").addEventListener("click",async e=>{
+ if(!ownerUnlocked)return;const edit=e.target.closest("[data-edit]"),del=e.target.closest("[data-delete-design]"),toggle=e.target.closest("[data-toggle-hidden]");
+ if(edit){startEditDesign(edit.dataset.edit);return}
+ if(del){await removeDesign(del.dataset.deleteDesign);return}
+ if(toggle){const d=designs.find(x=>x.id===toggle.dataset.toggleHidden);if(d){await putRecord(DESIGN_STORE,{...d,hidden:!d.hidden,updatedAt:new Date().toISOString()});designs=await allRecords(DESIGN_STORE);renderAll();toast("Design visibility updated.")}}
+});
+$("noticeForm").addEventListener("submit",saveAnnouncement);
+$("noticeAdminList").addEventListener("click",async e=>{
+ if(!ownerUnlocked)return;const t=e.target.closest("[data-toggle-notice]"),d=e.target.closest("[data-delete-notice]");
+ if(t){await toggleNotice(t.dataset.toggleNotice);return}
+ if(d){const a=announcements.find(x=>x.id===d.dataset.deleteNotice);if(a&&confirm("Delete this announcement?")){await deleteRecord(NOTICE_STORE,a.id);announcements=await allRecords(NOTICE_STORE);renderAll();toast("Announcement deleted.")}}
+});
+$("feedbackFilter").addEventListener("change",renderFeedbackAdminList);
+$("feedbackAdminList").addEventListener("click",async e=>{
+ if(!ownerUnlocked)return;
+ try{const r=e.target.closest("[data-reply]"),t=e.target.closest("[data-toggle-feedback]"),d=e.target.closest("[data-delete-feedback]");if(r){await saveReply(r.dataset.reply);return}if(t){await toggleFeedback(t.dataset.toggleFeedback);return}if(d)await deleteFeedback(d.dataset.deleteFeedback)}catch(err){toast("Could not update customer feedback.")}
+});
+$("exportBtn").addEventListener("click",exportBackup);
+$("importBtn").addEventListener("click",importBackup);
+document.querySelectorAll("[data-close]").forEach(b=>b.addEventListener("click",()=>{if(b.dataset.close==="adminModal")lockOwnerArea();else closeModal(b.dataset.close)}));
+document.querySelectorAll(".modal").forEach(m=>m.addEventListener("click",e=>{if(e.target===m){if(m.id==="adminModal")lockOwnerArea();else closeModal(m.id)}}));
+document.addEventListener("keydown",e=>{if(e.key==="Escape")document.querySelectorAll(".modal.show").forEach(m=>{if(m.id==="adminModal")lockOwnerArea();else closeModal(m.id)})});
+document.querySelectorAll(".admin-tab").forEach(b=>b.addEventListener("click",()=>setOwnerTab(b.dataset.tab)));
+
+/* Contact links */
+$("contactWhatsApp").href=whatsappLink("Hello C.N.S FASHION! I would like to enquire about your fashion design services in Kasoa.");
+$("heroWhatsApp").href=whatsappLink("Hello C.N.S FASHION! I would like to enquire about your fashion designs.");
+$("floatingWhatsApp").href=whatsappLink("Hello C.N.S FASHION! I would like to ask about your fashion collection.");
+
+/* External image fallback for the static page images too */
+document.querySelectorAll(".hero-image,.about-img").forEach(img=>img.addEventListener("error",()=>imageFallback(img),{once:true}));
+
+(async function init(){
+ try{db=await openDB();await loadAll()}
+ catch(error){console.error(error);$("designCount").textContent="Gallery unavailable";$("gallery").innerHTML='<div class="empty"><strong>Gallery could not load</strong><p>This browser could not open local storage. Try a modern browser with site storage enabled.</p></div>';toast("Local database could not be opened.")}
+})();
+</script>
+</body>
+</html>
